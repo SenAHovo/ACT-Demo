@@ -1,0 +1,62 @@
+{
+  "city": "上海",
+  "coordinates": {
+    "lat": 31.2,
+    "lon": 121.5
+  },
+  "query_date": "today",
+  "current": {
+    "temperature": "32°C",
+    "feels_like": "32°C",
+    "humidity": "56%",
+    "condition": "晴",
+    "wind": "北风 15.9 km/h",
+    "visibility": "12 km",
+    "uv_index": 1,
+    "aqi": 137,
+    "pressure": "1005 hPa"
+  },
+  "forecast": [
+    {
+      "day": 1,
+      "condition": "晴",
+      "temperature_high": "33°C",
+      "temperature_low": "26°C",
+      "humidity": "64%",
+      "precipitation": "69%"
+    },
+    {
+      "day": 2,
+      "condition": "多云",
+      "temperature_high": "31°C",
+      "temperature_low": "27°C",
+      "humidity": "86%",
+      "precipitation": "27%"
+    },
+    {
+      "day": 3,
+      "condition": "晴",
+      "temperature_high": "34°C",
+      "temperature_low": "27°C",
+      "humidity": "50%",
+      "precipitation": "9%"
+    },
+    {
+      "day": 4,
+      "condition": "多云",
+      "temperature_high": "35°C",
+      "temperature_low": "25°C",
+      "humidity": "48%",
+      "precipitation": "16%"
+    },
+    {
+      "day": 5,
+      "condition": "多云",
+      "temperature_high": "31°C",
+      "temperature_low": "26°C",
+      "humidity": "50%",
+      "precipitation": "21%"
+    }
+  ],
+  "query_time": "2026-07-28T02:29:31.631373+00:00"
+}

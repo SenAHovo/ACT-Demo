@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT 智能体自主委托支付 Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Microsoft YaHei", sans-serif;
+            background: #0f172a; color: #e2e8f0;
+            height: 100vh; display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-bottom: 1px solid #334155;
+            padding: 10px 20px;
+            display: flex; align-items: center; gap: 12px;
+            flex-shrink: 0;
+        }
+        .header h1 { font-size: 18px; font-weight: 600; color: #38bdf8; white-space: nowrap; }
+        .header .subtitle { font-size: 12px; color: #64748b; }
+        .header .spacer { flex: 1; }
+        .header .reset-btn {
+            background: #b91c1c; color: #fff; border: none; border-radius: 6px;
+            padding: 6px 16px; font-size: 12px; cursor: pointer; transition: all 0.2s;
+            white-space: nowrap; flex-shrink: 0;
+        }
+        .header .reset-btn:hover { background: #dc2626; }
+        .header .reset-btn:disabled { background: #475569; cursor: not-allowed; }
+        .header .topup-btn {
+            background: #059669; color: #fff; border: none; border-radius: 6px;
+            padding: 6px 16px; font-size: 12px; cursor: pointer; transition: all 0.2s;
+            white-space: nowrap; flex-shrink: 0; font-weight: 600;
+        }
+        .header .topup-btn:hover { background: #10b981; }
+        .header .topup-btn:disabled { background: #475569; cursor: not-allowed; }
+
+        /* Main Layout */
+        .main { display: flex; flex: 1; overflow: hidden; }
+        .panel {
+            border-right: 1px solid #1e293b;
+            display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        .panel:last-child { border-right: none; }
+        .panel-header {
+            background: #1e293b; padding: 10px 14px;
+            font-size: 13px; font-weight: 600; color: #94a3b8;
+            border-bottom: 1px solid #334155;
+            flex-shrink: 0; display: flex; align-items: center; gap: 8px;
+        }
+        .panel-header .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .panel-header .dot.green { background: #4ade80; }
+        .panel-header .dot.blue { background: #38bdf8; }
+
+        /* Left: Services Panel */
+        #services-panel { width: 280px; }
+        #services-list { flex: 1; overflow-y: auto; padding: 8px; }
+        .svc-card {
+            background: #1e293b; border: 1px solid #334155; border-radius: 8px;
+            padding: 12px; margin-bottom: 8px; transition: all 0.2s;
+        }
+        .svc-card:hover { border-color: #38bdf8; }
+        .svc-card .svc-name { font-size: 14px; font-weight: 600; color: #e2e8f0; margin-bottom: 4px; }
+        .svc-card .svc-id { font-size: 11px; color: #64748b; margin-bottom: 6px; }
+        .svc-card .svc-desc { font-size: 12px; color: #94a3b8; margin-bottom: 8px; }
+        .svc-card .svc-bottom { display: flex; justify-content: space-between; align-items: center; }
+        .svc-card .svc-price { font-size: 16px; font-weight: 700; color: #fbbf24; }
+        .svc-card button {
+            background: #2563eb; color: #fff; border: none; border-radius: 6px;
+            padding: 5px 14px; font-size: 12px; cursor: pointer; transition: all 0.2s;
+        }
+        .svc-card button:hover { background: #3b82f6; }
+        .svc-card button:disabled { background: #475569; cursor: not-allowed; }
+
+        /* Center: Chat Panel */
+        #chat-panel { flex: 1; min-width: 380px; }
+        #chat-messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+        .msg { max-width: 85%; padding: 10px 14px; border-radius: 10px; font-size: 13px; line-height: 1.5; word-break: break-word; }
+        .msg.user { align-self: flex-end; background: #2563eb; color: #fff; border-bottom-right-radius: 2px; }
+        .msg.assistant { align-self: flex-start; background: #1e293b; color: #e2e8f0; border: 1px solid #334155; border-bottom-left-radius: 2px; }
+        .msg.system { align-self: center; background: transparent; color: #64748b; font-size: 11px; padding: 4px 10px; }
+
+        /* File download card in chat */
+        .file-card {
+            display: flex; align-items: center; gap: 10px;
+            background: #0f172a; border: 1px solid #334155; border-radius: 8px;
+            padding: 10px 14px; margin-top: 10px;
+        }
+        .file-card .file-icon { font-size: 24px; }
+        .file-card .file-info { flex: 1; min-width: 0; }
+        .file-card .file-title { font-size: 13px; font-weight: 500; color: #e2e8f0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .file-card .file-hint { font-size: 11px; color: #64748b; margin-top: 2px; }
+        .file-card .file-dl {
+            background: #2563eb; color: #fff; border: none; border-radius: 6px;
+            padding: 6px 14px; font-size: 12px; cursor: pointer; text-decoration: none;
+            white-space: nowrap; transition: background 0.2s;
+        }
+        .file-card .file-dl:hover { background: #3b82f6; }
+
+        /* Chat input area */
+        #chat-input-area { padding: 10px; border-top: 1px solid #334155; flex-shrink: 0; }
+        .input-row { display: flex; gap: 8px; align-items: flex-end; }
+        #file-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; min-height: 0; }
+        .file-chip {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #1e3a5f; border: 1px solid #2563eb; border-radius: 16px;
+            padding: 4px 10px; font-size: 12px; color: #93c5fd;
+        }
+        .file-chip .chip-name {
+            max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+            cursor: pointer; text-decoration: underline; text-underline-offset: 2px;
+        }
+        .file-chip .chip-name:hover { color: #38bdf8; }
+        .file-chip .chip-remove {
+            cursor: pointer; color: #64748b; font-weight: bold; font-size: 14px;
+            line-height: 1; transition: color 0.2s;
+        }
+        .file-chip .chip-remove:hover { color: #fca5a5; }
+        /* File attachment in user message */
+        .msg-files {
+            margin-top: 8px; padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            display: flex; flex-wrap: wrap; gap: 4px;
+        }
+        .msg-file-tag {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: rgba(255,255,255,0.15); border-radius: 12px;
+            padding: 3px 10px; font-size: 11px; cursor: pointer;
+            transition: background 0.2s;
+        }
+        .msg-file-tag:hover { background: rgba(255,255,255,0.3); }
+
+        /* File preview modal */
+        .file-modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7); z-index: 2000; justify-content: center; align-items: center;
+        }
+        .file-modal-overlay.show { display: flex; }
+        .file-modal {
+            background: #1e293b; border: 1px solid #334155; border-radius: 12px;
+            max-width: 700px; width: 90%; max-height: 80vh; display: flex; flex-direction: column;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+        }
+        .file-modal-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 14px 18px; border-bottom: 1px solid #334155;
+        }
+        .file-modal-header .fm-title { font-size: 14px; font-weight: 600; color: #e2e8f0; }
+        .file-modal-header .fm-close {
+            background: none; border: none; color: #64748b; font-size: 20px;
+            cursor: pointer; line-height: 1; transition: color 0.2s;
+        }
+        .file-modal-header .fm-close:hover { color: #fca5a5; }
+        .file-modal-body {
+            flex: 1; overflow-y: auto; padding: 18px; font-size: 13px;
+            color: #cbd5e1; white-space: pre-wrap; word-break: break-word;
+            line-height: 1.6; font-family: 'Courier New', monospace;
+        }
+        .file-modal-body.loading { color: #64748b; text-align: center; padding: 40px; }
+        #upload-btn {
+            background: #1e293b; border: 1px dashed #475569; color: #94a3b8;
+            border-radius: 8px; padding: 10px 14px; font-size: 18px; cursor: pointer;
+            transition: all 0.2s; flex-shrink: 0; line-height: 1;
+        }
+        #upload-btn:hover { border-color: #38bdf8; color: #38bdf8; }
+        #chat-input {
+            flex: 1; background: #1e293b; border: 1px solid #334155; color: #e2e8f0;
+            border-radius: 8px; padding: 10px 14px; font-size: 13px; outline: none;
+            resize: none; height: 44px; max-height: 120px;
+        }
+        #chat-input:focus { border-color: #38bdf8; }
+        #chat-send-btn {
+            background: #2563eb; color: #fff; border: none; border-radius: 8px;
+            padding: 10px 20px; font-size: 13px; cursor: pointer; transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        #chat-send-btn:hover { background: #3b82f6; }
+        #chat-send-btn:disabled { background: #475569; cursor: not-allowed; }
+        #chat-stop-btn {
+            display: none;
+            background: #dc2626; color: #fff; border: none; border-radius: 8px;
+            padding: 10px 16px; font-size: 13px; cursor: pointer; transition: all 0.2s;
+            flex-shrink: 0; animation: pulse 1.5s ease-in-out infinite;
+        }
+        #chat-stop-btn:hover { background: #ef4444; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* 常用语按钮和弹出菜单 */
+        #quick-commands-btn {
+            background: #1e293b; border: 1px solid #475569; color: #94a3b8;
+            border-radius: 8px; padding: 10px 14px; font-size: 13px; cursor: pointer;
+            transition: all 0.2s; flex-shrink: 0; line-height: 1; white-space: nowrap;
+            position: relative;
+        }
+        #quick-commands-btn:hover { border-color: #38bdf8; color: #38bdf8; }
+        .quick-commands-popup {
+            display: none; position: absolute; bottom: 48px; left: 0;
+            background: #1e293b; border: 1px solid #334155; border-radius: 8px;
+            padding: 4px 0; min-width: 320px; z-index: 1000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        .quick-commands-popup.show { display: block; }
+        .quick-commands-popup .qc-title {
+            padding: 8px 14px 4px; font-size: 11px; color: #64748b;
+            border-bottom: 1px solid #1e293b;
+        }
+        .quick-commands-popup .qc-item {
+            display: block; width: 100%; text-align: left;
+            padding: 8px 14px; font-size: 12px; color: #cbd5e1;
+            background: none; border: none; cursor: pointer;
+            transition: background 0.15s;
+        }
+        .quick-commands-popup .qc-item:hover { background: #0f172a; color: #38bdf8; }
+        .quick-commands-popup .qc-item .qc-desc {
+            font-size: 11px; color: #64748b; margin-top: 2px;
+        }
+
+        /* Right: Process Panel */
+        #process-panel { width: 380px; }
+        #process-log { flex: 1; overflow-y: auto; padding: 8px; }
+        .log-step { margin-bottom: 6px; border-radius: 6px; overflow: hidden; }
+        .log-step .log-header {
+            display: flex; align-items: center; gap: 8px;
+            padding: 6px 10px; font-size: 11px;
+        }
+        .log-step.thinking .log-header { background: #0f1a2e; color: #38bdf8; }
+        .log-step.tool .log-header { background: #1a1a0f; color: #fbbf24; }
+        .log-step.result .log-header { background: #0f1a0f; color: #4ade80; }
+        .log-step .log-body {
+            padding: 6px 10px 8px 24px; font-size: 12px;
+            color: #94a3b8; white-space: pre-wrap; word-break: break-word;
+            line-height: 1.5; max-height: 300px; overflow-y: auto;
+        }
+        .log-step.thinking .log-body { color: #7dd3fc; }
+        .log-step.tool .log-body { color: #fde68a; }
+        .log-step.result .log-body { color: #86efac; }
+        .log-step .log-time { color: #475569; font-size: 10px; margin-right: 4px; }
+        .log-step .log-tag { font-weight: 600; }
+        .log-sep {
+            text-align: center; color: #475569; font-size: 11px;
+            padding: 6px 0; border-bottom: 1px solid #1e293b; margin-bottom: 4px;
+        }
+
+        /* Loading indicator */
+        .loading-dots::after { content: ''; animation: dots 1.2s steps(4, end) infinite; }
+        @keyframes dots {
+            0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; }
+        }
+        .thinking-indicator {
+            color: #38bdf8; font-size: 12px; padding: 4px 14px;
+        }
+
+        /* === 委托授权确认卡片 === */
+        .delegation-card {
+            background: linear-gradient(135deg, #1a2740, #162032);
+            border: 1px solid #3b82f6; border-radius: 12px;
+            padding: 18px 20px; margin: 10px 0;
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delegation-card .dc-title {
+            font-size: 14px; font-weight: 600; color: #e2e8f0;
+            margin-bottom: 4px; display: flex; align-items: center; gap: 8px;
+        }
+        .delegation-card .dc-title .dc-icon {
+            width: 32px; height: 32px; border-radius: 8px;
+            background: rgba(59,130,246,0.2); display: flex;
+            align-items: center; justify-content: center; font-size: 16px;
+        }
+        .delegation-card .dc-subtitle {
+            font-size: 12px; color: #64748b; margin-bottom: 14px;
+        }
+        .delegation-card .dc-info {
+            display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;
+        }
+        .delegation-card .dc-row {
+            display: flex; align-items: center; gap: 8px; font-size: 13px;
+        }
+        .delegation-card .dc-label { color: #64748b; min-width: 56px; }
+        .delegation-card .dc-value { color: #e2e8f0; }
+        .delegation-card .dc-value.budget { color: #fbbf24; font-weight: 600; }
+        .delegation-card .dc-services {
+            display: flex; flex-wrap: wrap; gap: 6px;
+        }
+        .delegation-card .dc-svc-tag {
+            background: #1e3a5f; border: 1px solid #2563eb;
+            border-radius: 14px; padding: 3px 12px;
+            font-size: 12px; color: #93c5fd;
+        }
+        .delegation-card .dc-actions {
+            display: flex; gap: 10px;
+        }
+        .delegation-card .dc-btn {
+            flex: 1; padding: 10px 0; border-radius: 8px;
+            font-size: 13px; font-weight: 600; cursor: pointer;
+            border: none; transition: all 0.2s;
+        }
+        .delegation-card .dc-btn.confirm {
+            background: #2563eb; color: #fff;
+        }
+        .delegation-card .dc-btn.confirm:hover { background: #3b82f6; }
+        .delegation-card .dc-btn.cancel {
+            background: #1e293b; color: #94a3b8; border: 1px solid #334155;
+        }
+        .delegation-card .dc-btn.cancel:hover { border-color: #ef4444; color: #fca5a5; }
+        .delegation-card .dc-btn:disabled {
+            opacity: 0.5; cursor: not-allowed;
+        }
+        .delegation-card.resolved {
+            opacity: 0.6; pointer-events: none;
+        }
+        .delegation-card .dc-status {
+            text-align: center; font-size: 13px; font-weight: 600;
+            padding: 8px 0; display: none;
+        }
+        .delegation-card.resolved .dc-status { display: block; }
+        .delegation-card.resolved .dc-actions { display: none; }
+        .delegation-card .dc-status.confirmed { color: #4ade80; }
+        .delegation-card .dc-status.cancelled { color: #fca5a5; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* === Markdown 渲染样式 === */
+        .msg.assistant .md-body { line-height: 1.7; overflow: hidden; }
+        .msg.assistant .md-body h1,
+        .msg.assistant .md-body h2,
+        .msg.assistant .md-body h3,
+        .msg.assistant .md-body h4 { margin: 16px 0 8px; color: #e2e8f0; font-weight: 600; }
+        .msg.assistant .md-body h1 { font-size: 1.4em; border-bottom: 1px solid #334155; padding-bottom: 6px; }
+        .msg.assistant .md-body h2 { font-size: 1.2em; }
+        .msg.assistant .md-body h3 { font-size: 1.05em; }
+        .msg.assistant .md-body p { margin: 6px 0; }
+        .msg.assistant .md-body ul, 
+        .msg.assistant .md-body ol { margin: 6px 0; padding-left: 24px; }
+        .msg.assistant .md-body li { margin: 2px 0; }
+        .msg.assistant .md-body code {
+            background: #0f172a; color: #38bdf8; padding: 1px 5px;
+            border-radius: 4px; font-size: 0.9em; font-family: 'Consolas','Courier New',monospace;
+        }
+        .msg.assistant .md-body pre {
+            background: #0f172a; border: 1px solid #334155; border-radius: 8px;
+            padding: 12px 16px; margin: 10px 0; overflow-x: auto;
+            font-size: 12px; line-height: 1.5;
+        }
+        .msg.assistant .md-body pre code {
+            background: none; color: #e2e8f0; padding: 0; font-size: inherit;
+        }
+        .msg.assistant .md-body blockquote {
+            border-left: 3px solid #3b82f6; padding: 6px 14px; margin: 8px 0;
+            color: #94a3b8; background: rgba(59,130,246,0.08); border-radius: 0 6px 6px 0;
+        }
+        .msg.assistant .md-body table {
+            border-collapse: collapse; margin: 8px 0; width: 100%; font-size: 12px;
+        }
+        .msg.assistant .md-body th, 
+        .msg.assistant .md-body td {
+            border: 1px solid #334155; padding: 6px 10px; text-align: left;
+        }
+        .msg.assistant .md-body th { background: #1e3a5f; color: #e2e8f0; font-weight: 600; }
+        .msg.assistant .md-body td { background: #162032; }
+        .msg.assistant .md-body a { color: #38bdf8; text-decoration: underline; }
+        .msg.assistant .md-body hr { border: none; border-top: 1px solid #334155; margin: 12px 0; }
+        .msg.assistant .md-body strong { color: #f1f5f9; font-weight: 600; }
+        .msg.assistant .md-body em { color: #cbd5e1; }
+
+        /* Responsive: hide services panel on small screens */
+        @media (max-width: 900px) { #services-panel { display: none; } }
+        @media (max-width: 700px) { #process-panel { width: 280px; } }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>ACT 智能体自主委托支付 Demo</h1>
+    <div class="subtitle">买方智能体 — 对话式服务购买</div>
+    <div class="spacer"></div>
+    <button class="topup-btn" onclick="topupAccount()" title="给账户充值 10 CNY">+10 CNY</button>
+    <button class="reset-btn" onclick="resetSystem()" title="重置数据库和智能体记忆">重置</button>
+</div>
+
+<!-- Main -->
+<div class="main">
+    <!-- ===== 左侧：服务目录 ===== -->
+    <div class="panel" id="services-panel">
+        <div class="panel-header">
+            <span class="dot green"></span> 服务目录
+        </div>
+        <div id="services-list">
+            <div style="text-align:center;color:#64748b;padding:20px;font-size:12px;">加载中...</div>
+        </div>
+    </div>
+
+    <!-- ===== 中间：对话面板 ===== -->
+    <div class="panel" id="chat-panel">
+        <div class="panel-header">对话</div>
+        <div id="chat-messages">
+            <div class="msg system">你好！我是 AI 购买助手。可以帮你发现、购买各类智能体服务，如周报生成、旅游攻略、翻译等。</div>
+        </div>
+        <div id="chat-input-area">
+            <div id="file-chips"></div>
+            <div class="input-row">
+                <input type="file" id="file-upload" onchange="handleFileSelect(this)" multiple style="display:none" accept=".docx,.txt,.md,.json,.csv,.pdf,.xlsx">
+                <button id="upload-btn" onclick="document.getElementById('file-upload').click()" title="上传文件">&#128206;</button>
+                <button id="quick-commands-btn" onclick="toggleQuickCommands()" title="测试常用语">常用语</button>
+                <div class="quick-commands-popup" id="quick-commands-popup">
+                    <div class="qc-title">选择测试命令</div>
+                    <button class="qc-item" onclick="pickQuickCommand('帮我查一下有什么服务')">
+                        查看服务目录
+                        <div class="qc-desc">发现可用服务</div>
+                    </button>
+                    <button class="qc-item" onclick="pickQuickCommand('查看我的账户余额')">
+                        查看账户余额
+                        <div class="qc-desc">查询预充值账户</div>
+                    </button>
+                    <button class="qc-item" onclick="pickQuickCommand('我想要一份旅游攻略，从北京到杭州，玩3天，预算2000元左右，偏好自然风光和美食')">
+                        购买旅游攻略
+                        <div class="qc-desc">北京→杭州 3天，含预算和偏好，0.35 CNY</div>
+                    </button>
+                    <button class="qc-item" onclick="pickQuickCommand('帮我翻译这段文本：Hello world, this is a test.')">
+                        文本翻译
+                        <div class="qc-desc">中文→英文翻译</div>
+                    </button>
+                    <button class="qc-item" onclick="pickQuickCommand('我要生成一份周报')">
+                        生成周报
+                        <div class="qc-desc">需先上传模板 DOCX</div>
+                    </button>
+                </div>
+                <textarea id="chat-input" placeholder="输入消息..." rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage();}"></textarea>
+                <button id="chat-send-btn" onclick="sendMessage()">发送</button>
+                <button id="chat-stop-btn" onclick="stopChat()" title="停止思考和任务">&#9632; 停止</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 右侧：思考过程 ===== -->
+    <div class="panel" id="process-panel">
+        <div class="panel-header">
+            <span class="dot blue"></span> 思考过程
+        </div>
+        <div id="process-log">
+            <div style="text-align:center;color:#475569;padding:20px;font-size:12px;">等待对话开始...</div>
+        </div>
+    </div>
+</div>
+
+<!-- 文件预览弹窗 -->
+<div class="file-modal-overlay" id="file-modal-overlay" onclick="if(event.target===this)closeFileModal()">
+    <div class="file-modal">
+        <div class="file-modal-header">
+            <span class="fm-title" id="fm-title">文件预览</span>
+            <button class="fm-close" onclick="closeFileModal()">&times;</button>
+        </div>
+        <div class="file-modal-body loading" id="fm-body">加载中...</div>
+    </div>
+</div>
+
+<script>
+// ============================================================
+// 全局状态
+// ============================================================
+var isBusy = false;
+var services = [];
+var uploadedFiles = [];  // [{file_id, filename}]
+var abortController = null;  // 用于取消正在进行的 SSE 请求
+
+// ============================================================
+// 服务目录
+// ============================================================
+async function loadServices() {
+    try {
+        var resp = await fetch('/api/services');
+        var data = await resp.json();
+        services = data.services || data || [];
+        renderServices();
+    } catch(e) {
+        document.getElementById('services-list').innerHTML =
+            '<div style="text-align:center;color:#ef4444;padding:20px;font-size:12px;">服务不可用<br>请确认后端已启动</div>';
+    }
+}
+
+function renderServices() {
+    var container = document.getElementById('services-list');
+    if (!services || services.length === 0) {
+        container.innerHTML = '<div style="text-align:center;color:#64748b;padding:20px;font-size:12px;">暂无服务</div>';
+        return;
+    }
+    container.innerHTML = services.map(function(svc, i) {
+        var sid = svc.service_id || svc.id || ('svc_' + (i+1));
+        return '<div class="svc-card">' +
+            '<div class="svc-id">' + sid + '</div>' +
+            '<div class="svc-name">' + (svc.name || '未命名服务') + '</div>' +
+            '<div class="svc-desc">' + (svc.description || '') + '</div>' +
+            '<div class="svc-bottom">' +
+                '<span class="svc-price">' + (svc.price || '?') + ' ' + (svc.currency || 'CNY') + '</span>' +
+                '<button onclick="buyService(\'' + sid + '\')" ' + (isBusy ? 'disabled' : '') + '>购买</button>' +
+            '</div>' +
+        '</div>';
+    }).join('');
+}
+
+function buyService(serviceId) {
+    document.getElementById('chat-input').value = '帮我购买 ' + serviceId;
+    sendMessage();
+}
+
+// ============================================================
+// 文件上传（融入输入区）
+// ============================================================
+async function handleFileSelect(input) {
+    var files = input.files;
+    for (var i = 0; i < files.length; i++) {
+        await uploadOneFile(files[i]);
+    }
+    input.value = '';
+    renderFileChips();
+}
+
+async function uploadOneFile(file) {
+    var formData = new FormData();
+    formData.append('file', file);
+    try {
+        var resp = await fetch('/api/files/upload', { method: 'POST', body: formData });
+        var data = await resp.json();
+        uploadedFiles.push({ file_id: data.file_id, filename: data.filename });
+    } catch(e) {
+        alert('上传失败: ' + e);
+    }
+}
+
+function removeFileChip(fileId) {
+    uploadedFiles = uploadedFiles.filter(function(f) { return f.file_id !== fileId; });
+    renderFileChips();
+}
+
+function renderFileChips() {
+    var container = document.getElementById('file-chips');
+    if (uploadedFiles.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+    container.innerHTML = uploadedFiles.map(function(f) {
+        return '<span class="file-chip">' +
+            '<span class="chip-name" title="' + f.filename + ' — 点击查看内容" onclick="event.stopPropagation();viewFileContent(\'' + f.file_id + '\',\'' + f.filename.replace(/'/g, "\\'") + '\')">' + f.filename + '</span>' +
+            '<span class="chip-remove" onclick="removeFileChip(\'' + f.file_id + '\')">&times;</span>' +
+        '</span>';
+    }).join('');
+}
+
+// ============================================================
+// 文件预览
+// ============================================================
+async function viewFileContent(fileId, filename) {
+    var overlay = document.getElementById('file-modal-overlay');
+    var title = document.getElementById('fm-title');
+    var body = document.getElementById('fm-body');
+    title.textContent = filename || '文件预览';
+    body.className = 'file-modal-body loading';
+    body.textContent = '加载中...';
+    overlay.classList.add('show');
+    try {
+        var resp = await fetch('/api/files/' + fileId + '/content');
+        var data = await resp.json();
+        if (data.content !== undefined) {
+            body.className = 'file-modal-body';
+            body.textContent = data.content;
+        } else {
+            body.textContent = '(文件内容为空)';
+        }
+    } catch(e) {
+        body.className = 'file-modal-body';
+        body.textContent = '加载失败: ' + e.message;
+    }
+}
+
+function closeFileModal() {
+    document.getElementById('file-modal-overlay').classList.remove('show');
+}
+
+// ESC 关闭弹窗
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeFileModal();
+    }
+});
+
+// ============================================================
+// 对话核心
+// ============================================================
+function addMessage(role, text, files) {
+    var container = document.getElementById('chat-messages');
+    var msgDiv = document.createElement('div');
+    msgDiv.className = 'msg ' + role;
+    msgDiv.innerHTML = text.replace(/\n/g, '<br>');
+
+    // 如果有附件文件，显示文件标签
+    if (files && files.length > 0) {
+        var filesHtml = '<div class="msg-files">';
+        for (var i = 0; i < files.length; i++) {
+            var fid = files[i].file_id;
+            var fname = files[i].filename.replace(/'/g, "\\'");
+            filesHtml += '<span class="msg-file-tag" onclick="viewFileContent(\'' + fid + '\',\'' + fname + '\')" title="点击查看内容">&#128206; ' + files[i].filename + '</span>';
+        }
+        filesHtml += '</div>';
+        msgDiv.innerHTML += filesHtml;
+    }
+
+    container.appendChild(msgDiv);
+    container.scrollTop = container.scrollHeight;
+    return msgDiv;
+}
+
+function addAssistantMessage() {
+    // 创建助手消息气泡，内含专用文本 span（下载卡片追加到外层，不会被覆盖）
+    var container = document.getElementById('chat-messages');
+    var msgDiv = document.createElement('div');
+    msgDiv.className = 'msg assistant';
+    var textSpan = document.createElement('span');
+    textSpan.className = 'thinking-indicator loading-dots';
+    textSpan.textContent = '思考中';
+    msgDiv.appendChild(textSpan);
+    container.appendChild(msgDiv);
+    container.scrollTop = container.scrollHeight;
+    return msgDiv;
+}
+
+function addDownloadCard(parentMsg, fileId, filename, serviceId) {
+    // 根据服务类型显示不同的下载提示
+    var hintText = '点击下载文件';
+    if (serviceId === 'utility.translation') {
+        hintText = '点击下载翻译结果';
+    } else if (serviceId === 'data.industry.query') {
+        hintText = '点击下载数据查询结果';
+    } else if (serviceId === 'analysis.industry.trend') {
+        hintText = '点击下载趋势分析结果';
+    } else if (serviceId === 'report.industry.brief') {
+        hintText = '点击下载行业简报';
+    }
+    var card = document.createElement('div');
+    card.className = 'file-card';
+    card.innerHTML =
+        '<span class="file-icon">&#128196;</span>' +
+        '<div class="file-info">' +
+            '<div class="file-title">' + filename + '</div>' +
+            '<div class="file-hint">' + hintText + '</div>' +
+        '</div>' +
+        '<a class="file-dl" href="/api/files/' + fileId + '/download" download>下载</a>';
+    parentMsg.appendChild(card);
+    var c = document.getElementById('chat-messages');
+    c.scrollTop = c.scrollHeight;
+}
+
+// ---- 思考过程面板 ----
+var processContainer = null;
+var currentThinkingStep = null;  // 当前正在累积的思考步骤
+var processHistory = [];          // 全部历史条目 [{type, text, time}]，用数组保证不丢失
+var delegationCard = null;       // 委托授权确认卡片 DOM 元素
+
+function ensureProcessContainer() {
+    if (!processContainer) {
+        processContainer = document.getElementById('process-log');
+        // 清空初始占位文字
+        if (processContainer.children.length === 1 &&
+            processContainer.children[0].style.color === 'rgb(71, 85, 105)') {
+            processContainer.innerHTML = '';
+        }
+    }
+}
+
+function renderProcessPanel() {
+    // 从 processHistory 数组全量重渲染
+    ensureProcessContainer();
+    var html = '';
+    for (var i = 0; i < processHistory.length; i++) {
+        var item = processHistory[i];
+        var tagLabels = { thinking: '思考', tool: '调用', result: '完成', separator: 'sep' };
+        var tagIcons = { thinking: '&#128161;', tool: '&#128295;', result: '&#9989;', separator: '' };
+
+        if (item.type === 'separator') {
+            html += '<div class="log-sep">--- ' + item.time + ' ---</div>';
+        } else {
+            html +=
+                '<div class="log-step ' + item.type + '">' +
+                    '<div class="log-header">' +
+                        '<span class="log-time">' + item.time + '</span>' +
+                        '<span class="log-tag">' + (tagIcons[item.type] || '') + ' ' + (tagLabels[item.type] || '') + '</span>' +
+                    '</div>' +
+                    '<div class="log-body">' + item.text.replace(/\n/g, '<br>') + '</div>' +
+                '</div>';
+        }
+    }
+    processContainer.innerHTML = html;
+    processContainer.scrollTop = processContainer.scrollHeight;
+}
+
+function addProcessStep(type, text) {
+    currentThinkingStep = null;
+    var now = new Date();
+    var time = ('0' + now.getHours()).slice(-2) + ':' +
+               ('0' + now.getMinutes()).slice(-2) + ':' +
+               ('0' + now.getSeconds()).slice(-2);
+    processHistory.push({ type: type, text: text, time: time });
+    renderProcessPanel();
+}
+
+function startThinkingStep() {
+    currentThinkingStep = null;
+    var now = new Date();
+    var time = ('0' + now.getHours()).slice(-2) + ':' +
+               ('0' + now.getMinutes()).slice(-2) + ':' +
+               ('0' + now.getSeconds()).slice(-2);
+    // 思考步骤：type=thinking，text 为空（后续追加）
+    processHistory.push({ type: 'thinking', text: '', time: time });
+    // 记住当前步骤在数组中的索引，用于追加文本
+    currentThinkingStep = processHistory[processHistory.length - 1];
+    renderProcessPanel();
+}
+
+function appendThinkingText(text) {
+    if (currentThinkingStep) {
+        currentThinkingStep.text += text;
+        // 直接更新 DOM 而不全量重渲染（性能优化，但更安全的是用渲染）
+        renderProcessPanel();
+    } else {
+        startThinkingStep();
+        if (currentThinkingStep) {
+            currentThinkingStep.text += text;
+            renderProcessPanel();
+        }
+    }
+}
+
+// ============================================================
+// 委托授权确认卡片
+// ============================================================
+function showDelegationCard(payload) {
+    var container = document.getElementById('chat-messages');
+    var card = document.createElement('div');
+    card.className = 'delegation-card';
+    card.id = 'delegation-card';
+
+    var servicesHtml = (payload.services || []).map(function(s) {
+        return '<span class="dc-svc-tag">' + s.name + ' (' + s.price + ')</span>';
+    }).join('');
+
+    card.innerHTML =
+        '<div class="dc-title">' +
+            '<span class="dc-icon">&#128274;</span> 委托授权确认' +
+        '</div>' +
+        '<div class="dc-subtitle">智能体将代表您执行以下购买操作，请确认授权</div>' +
+        '<div class="dc-info">' +
+            '<div class="dc-row"><span class="dc-label">任务目标</span><span class="dc-value">' + (payload.task_goal || '购买服务') + '</span></div>' +
+            '<div class="dc-row"><span class="dc-label">购买服务</span><div class="dc-services">' + (servicesHtml || '<span class="dc-value">无</span>') + '</div></div>' +
+            '<div class="dc-row"><span class="dc-label">服务总价</span><span class="dc-value" style="color:#fbbf24;font-weight:600;">' + (payload.total_price || '?') + ' CNY</span></div>' +
+            '<div class="dc-row"><span class="dc-label">账户余额</span><span class="dc-value" style="color:#4ade80;font-weight:600;">' + (payload.balance || '?') + '</span></div>' +
+            '<div class="dc-row"><span class="dc-label">预算上限</span><span class="dc-value budget">' + (payload.budget_limit || '?') + ' CNY</span></div>' +
+        '</div>' +
+        '<div class="dc-actions">' +
+            '<button class="dc-btn confirm" onclick="confirmDelegation()">确认授权</button>' +
+            '<button class="dc-btn cancel" onclick="cancelDelegation()">取消</button>' +
+        '</div>' +
+        '<div class="dc-status"></div>';
+
+    container.appendChild(card);
+    container.scrollTop = container.scrollHeight;
+    delegationCard = card;
+}
+
+function resolveDelegationCard(confirmed) {
+    if (!delegationCard) return;
+    delegationCard.classList.add('resolved');
+    var statusEl = delegationCard.querySelector('.dc-status');
+    if (statusEl) {
+        statusEl.textContent = confirmed ? '已确认' : '已取消';
+        statusEl.className = 'dc-status ' + (confirmed ? 'confirmed' : 'cancelled');
+    }
+    // 禁用按钮
+    var btns = delegationCard.querySelectorAll('.dc-btn');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].disabled = true;
+    }
+}
+
+async function confirmDelegation() {
+    if (!delegationCard) return;
+    var btns = delegationCard.querySelectorAll('.dc-btn');
+    for (var i = 0; i < btns.length; i++) { btns[i].disabled = true; }
+    try {
+        await fetch('/api/delegation/confirm', { method: 'POST' });
+    } catch(e) {
+        // 网络错误时恢复按钮
+        for (var i = 0; i < btns.length; i++) { btns[i].disabled = false; }
+        return;
+    }
+    resolveDelegationCard(true);
+}
+
+async function cancelDelegation() {
+    if (!delegationCard) return;
+    var btns = delegationCard.querySelectorAll('.dc-btn');
+    for (var i = 0; i < btns.length; i++) { btns[i].disabled = true; }
+    try {
+        await fetch('/api/delegation/cancel', { method: 'POST' });
+    } catch(e) {
+        for (var i = 0; i < btns.length; i++) { btns[i].disabled = false; }
+        return;
+    }
+    resolveDelegationCard(false);
+}
+
+// ============================================================
+// 发送消息 + SSE 流处理
+// ============================================================
+function sendMessage() {
+    if (isBusy) return;
+
+    var input = document.getElementById('chat-input');
+    var text = input.value.trim();
+    if (!text) return;
+
+    // 如果有已上传文件但未发送，把文件 ID 带上
+    var fileIdParam = '';
+    if (uploadedFiles.length > 0) {
+        fileIdParam = '&file_ids=' + uploadedFiles.map(function(f) { return f.file_id; }).join(',');
+    }
+
+    isBusy = true;
+    document.getElementById('chat-send-btn').disabled = true;
+    document.getElementById('chat-stop-btn').style.display = 'inline-block';
+    input.disabled = true;
+
+    // 创建 AbortController 用于中断请求
+    abortController = new AbortController();
+
+    // 保存发送的文件列表（在清空前）
+    var sentFiles = uploadedFiles.slice();
+    addMessage('user', text, sentFiles);
+    input.value = '';
+
+    // 发送后清空文件列表
+    uploadedFiles = [];
+    renderFileChips();
+
+    // 创建 assistant 消息气泡，内含专用文本 span
+    var assistantMsg = addAssistantMessage();
+    var currentAssistantMsg = assistantMsg;  // 当前活跃的助手气泡（卡片确认后会切换）
+
+    // 思考面板追加本轮分隔标记（不清空历史）
+    var now = new Date();
+    var sepTime = ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
+    processHistory.push({ type: 'separator', text: '', time: sepTime });
+    currentThinkingStep = null;
+    renderProcessPanel();
+
+    var chatFullText = '';  // 累积对话区的文本（chat 事件），独立于 thinking
+    var buffer = '';
+    var resolved = false;
+    delegationCard = null;   // 新消息开始时清除旧卡片引用
+
+    // 渲染队列（仅用于思考面板等非对话区的更新）
+    var renderQueue = [];
+    var rafId = null;
+
+    function processRenderQueue() {
+        if (renderQueue.length === 0) {
+            rafId = null;
+            return;
+        }
+        var fn = renderQueue.shift();
+        fn();
+        rafId = requestAnimationFrame(processRenderQueue);
+    }
+
+    function scheduleRender(fn) {
+        renderQueue.push(fn);
+        if (!rafId) {
+            rafId = requestAnimationFrame(processRenderQueue);
+        }
+    }
+
+    fetch('/api/chat/stream?message=' + encodeURIComponent(text) + fileIdParam, { signal: abortController.signal })
+        .then(function(response) {
+            var reader = response.body.getReader();
+            var decoder = new TextDecoder();
+
+            function pump() {
+                reader.read().then(function(result) {
+                    if (result.done) {
+                        processBuffer(true);
+                        if (!resolved) { resolved = true; finishChat(input); }
+                        return;
+                    }
+                    buffer += decoder.decode(result.value, { stream: true });
+                    processBuffer(false);
+                    pump();
+                }).catch(function(err) {
+                    if (!resolved) {
+                        resolved = true;
+                        currentAssistantMsg.innerHTML = '<span style="color:#fca5a5;">读取错误: ' + err.message + '</span>';
+                        finishChat(input);
+                    }
+                });
+            }
+
+            function processBuffer(isFinal) {
+                var parts = buffer.split('\n\n');
+                buffer = isFinal ? '' : (parts.pop() || '');
+
+                for (var i = 0; i < parts.length; i++) {
+                    var msg = parts[i].trim();
+                    if (!msg) continue;
+
+                    var evt = '';
+                    var dat = '';
+                    var lines = msg.split('\n');
+                    for (var j = 0; j < lines.length; j++) {
+                        var ln = lines[j];
+                        if (ln.indexOf('event: ') === 0) {
+                            evt = ln.substring(7).trim();
+                        } else if (ln.indexOf('data: ') === 0) {
+                            dat = ln.substring(6);
+                        }
+                    }
+
+                    if (evt && dat) {
+                        handleSSE(evt, dat);
+                    }
+                }
+            }
+
+            function handleSSE(evt, dat) {
+                var payload = {};
+                try { payload = JSON.parse(dat); } catch(e) { return; }
+
+                if (evt === 'connected') {
+                    // 连接确认
+                } else if (evt === 'thinking') {
+                    // 仅在思考面板展示
+                    scheduleRender(function() {
+                        appendThinkingText(payload.text || '');
+                    });
+                } else if (evt === 'chat') {
+                    // 对话区分块渲染：每轮是完整段落，直接追加解析，不清空已有内容
+                    (function(blockText) {
+                        chatFullText += (chatFullText ? '\n\n' : '') + blockText;
+                        var textSpan = currentAssistantMsg.querySelector('.thinking-indicator');
+                        if (!textSpan) {
+                            textSpan = currentAssistantMsg.querySelector('span');
+                        }
+                        if (textSpan) {
+                            if (textSpan.className.indexOf('loading-dots') >= 0) {
+                                textSpan.className = '';
+                                textSpan.innerHTML = '';
+                            }
+                            // 确保有 md-body 容器
+                            var mdBody = textSpan.querySelector('.md-body');
+                            if (!mdBody) {
+                                mdBody = document.createElement('div');
+                                mdBody.className = 'md-body';
+                                textSpan.appendChild(mdBody);
+                            }
+                            // 只解析本轮新增的块，追加到容器末尾
+                            var blockHtml = typeof marked !== 'undefined'
+                                ? marked.parse(blockText)
+                                : blockText.replace(/\n/g, '<br>');
+                            mdBody.innerHTML += blockHtml;
+                        }
+                        var c = document.getElementById('chat-messages');
+                        c.scrollTop = c.scrollHeight;
+                    })(payload.text || '');
+                } else if (evt === 'tool_start') {
+                    // 结束当前思考步骤，新建工具步骤
+                    currentThinkingStep = null;
+                    var tools = (payload.tools || []).join(', ');
+                    scheduleRender(function() {
+                        addProcessStep('tool', tools);
+                    });
+                } else if (evt === 'delegation_pending') {
+                    // 显示委托授权确认卡片
+                    showDelegationCard(payload);
+                } else if (evt === 'delegation_resolved') {
+                    // 卡片状态已由 confirmDelegation/cancelDelegation 处理
+                    if (delegationCard && !delegationCard.classList.contains('resolved')) {
+                        resolveDelegationCard(payload.confirmed);
+                    }
+                    // 确认后，后续输出放到新的助手气泡
+                    if (payload.confirmed) {
+                        chatFullText = '';
+                        var newMsg = addAssistantMessage();
+                        // 移除初始的 loading 指示器，准备接收新内容
+                        var span = newMsg.querySelector('span');
+                        if (span) { span.className = ''; span.textContent = ''; }
+                        currentAssistantMsg = newMsg;
+                    }
+                } else if (evt === 'tool_result') {
+                    var result = payload.result || '';
+                    scheduleRender(function() {
+                        addProcessStep('result', result);
+                    });
+                } else if (evt === 'a2a') {
+                    // A2A 买卖双方交互步骤
+                    var step = payload.step || '';
+                    scheduleRender(function() {
+                        addProcessStep('tool', step);
+                    });
+                } else if (evt === 'file_ready') {
+                    // 在对话区渲染下载卡片
+                    (function(fid, fname, sid) {
+                        scheduleRender(function() {
+                            addDownloadCard(currentAssistantMsg, fid, fname, sid);
+                        });
+                    })(payload.file_id, payload.filename, payload.service_id || '');
+                } else if (evt === 'done') {
+                    // 对话区最终确认 — 仅在没有任何 chat 事件时才全量渲染（如简单回复）
+                    if (!chatFullText) {
+                        var finalText = payload.text || '';
+                        if (finalText) {
+                            var textSpan = currentAssistantMsg.querySelector('span');
+                            if (textSpan && textSpan.className.indexOf('loading-dots') >= 0) {
+                                textSpan.className = '';
+                            }
+                            var mdHtml = typeof marked !== 'undefined'
+                                ? marked.parse(finalText)
+                                : finalText.replace(/\n/g, '<br>');
+                            currentAssistantMsg.innerHTML = '<div class="md-body">' + mdHtml + '</div>';
+                        }
+                    }
+                    var c = document.getElementById('chat-messages');
+                    c.scrollTop = c.scrollHeight;
+                } else if (evt === 'error') {
+                    scheduleRender(function() {
+                        currentAssistantMsg.innerHTML = '<span style="color:#fca5a5;">错误: ' + (payload.text || '') + '</span>';
+                    });
+                }
+            }
+
+            pump();
+        }).catch(function(err) {
+            if (err.name === 'AbortError') {
+                // 用户主动取消，静默处理
+                if (!resolved) { resolved = true; finishChat(input); }
+                return;
+            }
+            if (!resolved) {
+                resolved = true;
+                currentAssistantMsg.innerHTML = '<span style="color:#fca5a5;">连接失败: ' + err.message + '</span>';
+                finishChat(input);
+            }
+        });
+
+    function finishChat(inp) {
+        isBusy = false;
+        abortController = null;
+        document.getElementById('chat-send-btn').disabled = false;
+        document.getElementById('chat-stop-btn').style.display = 'none';
+        inp.disabled = false;
+        inp.focus();
+    }
+}
+
+function stopChat() {
+    if (abortController) {
+        abortController.abort();
+        abortController = null;
+    }
+}
+
+// ============================================================
+// 账户充值
+// ============================================================
+async function topupAccount() {
+    var btn = document.querySelector('.topup-btn');
+    btn.disabled = true;
+    btn.textContent = '充值中...';
+    try {
+        var resp = await fetch('/api/account/topup', { method: 'POST' });
+        var data = await resp.json();
+        if (data.balance) {
+            addMessage('system', '已充值 +10.00 CNY，当前余额: ' + data.balance + ' CNY');
+        } else {
+            addMessage('system', '充值失败');
+        }
+    } catch(e) {
+        addMessage('system', '充值失败: ' + e.message);
+    } finally {
+        btn.disabled = false;
+        btn.textContent = '+10 CNY';
+    }
+}
+
+// ============================================================
+// 重置系统
+// ============================================================
+async function resetSystem() {
+    if (!confirm('确定要重置吗？将清空所有数据库和智能体记忆。')) return;
+
+    var btn = document.querySelector('.reset-btn');
+    btn.disabled = true;
+    btn.textContent = '重置中...';
+
+    try {
+        var resp = await fetch('/api/reset', { method: 'POST' });
+        var data = await resp.json();
+
+        // 清空前端界面
+        document.getElementById('chat-messages').innerHTML =
+            '<div class="msg system">你好！我是 AI 购买助手。可以帮你发现、购买各类智能体服务，如周报生成、旅游攻略、翻译等。</div>';
+        document.getElementById('process-log').innerHTML =
+            '<div style="text-align:center;color:#475569;padding:20px;font-size:12px;">等待对话开始...</div>';
+        document.getElementById('chat-input').value = '';
+
+        // 重置前端状态
+        isBusy = false;
+        services = [];
+        uploadedFiles = [];
+        processHistory = [];
+        currentThinkingStep = null;
+        processContainer = null;
+        delegationCard = null;
+
+        renderFileChips();
+        document.getElementById('chat-send-btn').disabled = false;
+        document.getElementById('chat-input').disabled = false;
+
+        // 重新加载服务目录
+        await loadServices();
+
+        if (data.ok) {
+            alert('重置完成！已清空 ' + (data.deleted_files || []).length + ' 个文件。');
+        } else {
+            alert('重置完成，但有以下错误:\n' + (data.errors || []).join('\n'));
+        }
+    } catch(e) {
+        alert('重置失败: ' + e.message);
+    } finally {
+        btn.disabled = false;
+        btn.textContent = '重置';
+    }
+}
+
+
+// ============================================================
+// 常用语快捷命令
+// ============================================================
+function toggleQuickCommands() {
+    var popup = document.getElementById('quick-commands-popup');
+    popup.classList.toggle('show');
+}
+
+function pickQuickCommand(text) {
+    document.getElementById('chat-input').value = text;
+    document.getElementById('quick-commands-popup').classList.remove('show');
+    document.getElementById('chat-input').focus();
+}
+
+// 点击其他区域关闭弹出
+document.addEventListener('click', function(e) {
+    var popup = document.getElementById('quick-commands-popup');
+    var btn = document.getElementById('quick-commands-btn');
+    if (popup && btn && !popup.contains(e.target) && e.target !== btn) {
+        popup.classList.remove('show');
+    }
+});
+
+
+// ============================================================
+// 初始化
+// ============================================================
+loadServices();
+</script>
+</body>
+</html>

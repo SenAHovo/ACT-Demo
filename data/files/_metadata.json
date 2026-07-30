@@ -1,0 +1,688 @@
+{
+  "file_c363cd4ac376": {
+    "file_id": "file_c363cd4ac376",
+    "filename": "test_report.docx",
+    "stored_name": "file_c363cd4ac376.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_c363cd4ac376.docx",
+    "size": 36742,
+    "description": "测试报告",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-28T01:56:53.632600+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_a9e71ab34452": {
+    "file_id": "file_a9e71ab34452",
+    "filename": "test_report_EN.docx",
+    "stored_name": "file_a9e71ab34452.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_a9e71ab34452.docx",
+    "size": 36706,
+    "description": "翻译结果: test_report.docx (zh→en)",
+    "tags": [
+      "service-output",
+      "translation"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T01:56:54.433423+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_97c4bdf8cce5": {
+    "file_id": "file_97c4bdf8cce5",
+    "filename": "weather_trade_a8593a4995e14e19.json",
+    "stored_name": "file_97c4bdf8cce5.json",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_97c4bdf8cce5.json",
+    "size": 1318,
+    "description": "天气查询结果",
+    "tags": [
+      "service-output",
+      "utility.weather.query"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T02:28:18.710990+00:00",
+    "content_type": "application/json"
+  },
+  "file_f31432829b15": {
+    "file_id": "file_f31432829b15",
+    "filename": "weather_trade_17d2a5a7c2c04aa4.json",
+    "stored_name": "file_f31432829b15.json",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_f31432829b15.json",
+    "size": 1318,
+    "description": "天气查询结果",
+    "tags": [
+      "service-output",
+      "utility.weather.query"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T02:29:31.899538+00:00",
+    "content_type": "application/json"
+  },
+  "file_66afc40646ce": {
+    "file_id": "file_66afc40646ce",
+    "filename": "translation_trade_884a3cf34b384286.json",
+    "stored_name": "file_66afc40646ce.json",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_66afc40646ce.json",
+    "size": 221,
+    "description": "翻译结果",
+    "tags": [
+      "service-output",
+      "utility.translation"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T02:59:50.434371+00:00",
+    "content_type": "application/json"
+  },
+  "file_f6053d149364": {
+    "file_id": "file_f6053d149364",
+    "filename": "translation_.json",
+    "stored_name": "file_f6053d149364.json",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_f6053d149364.json",
+    "size": 192,
+    "description": "翻译结果",
+    "tags": [
+      "service-output",
+      "utility.translation"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T04:02:14.431961+00:00",
+    "content_type": "application/json"
+  },
+  "file_79a428afcfec": {
+    "file_id": "file_79a428afcfec",
+    "filename": "industry_data_.csv",
+    "stored_name": "file_79a428afcfec.csv",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_79a428afcfec.csv",
+    "size": 6496,
+    "description": "行业数据查询结果 (180 条记录)",
+    "tags": [
+      "service-output",
+      "data.industry.query"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T05:42:25.572273+00:00",
+    "content_type": "text/csv"
+  },
+  "file_be974237e0ed": {
+    "file_id": "file_be974237e0ed",
+    "filename": "industry_report_.md",
+    "stored_name": "file_be974237e0ed.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_be974237e0ed.md",
+    "size": 3916,
+    "description": "行业简报",
+    "tags": [
+      "report",
+      "report.industry.brief"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T05:43:29.310056+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_17e67f7194af": {
+    "file_id": "file_17e67f7194af",
+    "filename": "translation_.json",
+    "stored_name": "file_17e67f7194af.json",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_17e67f7194af.json",
+    "size": 192,
+    "description": "翻译结果",
+    "tags": [
+      "service-output",
+      "utility.translation"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T05:57:21.024531+00:00",
+    "content_type": "application/json"
+  },
+  "file_ca6bfa2e5129": {
+    "file_id": "file_ca6bfa2e5129",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_ca6bfa2e5129.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_ca6bfa2e5129.docx",
+    "size": 40160,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T08:48:41.014026+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_ebae2bd2f346": {
+    "file_id": "file_ebae2bd2f346",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_ebae2bd2f346.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_ebae2bd2f346.docx",
+    "size": 42391,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T08:54:28.355428+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_44589cb43039": {
+    "file_id": "file_44589cb43039",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_44589cb43039.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_44589cb43039.docx",
+    "size": 40335,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T08:56:55.488365+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_1b55f202b3eb": {
+    "file_id": "file_1b55f202b3eb",
+    "filename": "武汉旅游攻略_4天.docx",
+    "stored_name": "file_1b55f202b3eb.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_1b55f202b3eb.docx",
+    "size": 42079,
+    "description": "郑州→武汉 4天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:09:27.992170+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_5e7102e3a806": {
+    "file_id": "file_5e7102e3a806",
+    "filename": "武汉旅游攻略_4天.docx",
+    "stored_name": "file_5e7102e3a806.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_5e7102e3a806.docx",
+    "size": 42049,
+    "description": "郑州→武汉 4天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:10:20.954994+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_4e3047daff7e": {
+    "file_id": "file_4e3047daff7e",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_4e3047daff7e.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_4e3047daff7e.docx",
+    "size": 40761,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:12:49.379543+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_d6de16bf29c5": {
+    "file_id": "file_d6de16bf29c5",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_d6de16bf29c5.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_d6de16bf29c5.docx",
+    "size": 40016,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:21:43.719932+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_93345854743b": {
+    "file_id": "file_93345854743b",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_93345854743b.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_93345854743b.docx",
+    "size": 40800,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:28:04.859462+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_355ce460a2ed": {
+    "file_id": "file_355ce460a2ed",
+    "filename": "杭州旅游攻略_3天.docx",
+    "stored_name": "file_355ce460a2ed.docx",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_355ce460a2ed.docx",
+    "size": 41065,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "docx"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:35:07.658506+00:00",
+    "content_type": "application/octet-stream"
+  },
+  "file_4ea1c50f9931": {
+    "file_id": "file_4ea1c50f9931",
+    "filename": "杭州旅游攻略_3天.md",
+    "stored_name": "file_4ea1c50f9931.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_4ea1c50f9931.md",
+    "size": 11916,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:41:55.051750+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_8ed7ac300393": {
+    "file_id": "file_8ed7ac300393",
+    "filename": "杭州旅游攻略_3天.md",
+    "stored_name": "file_8ed7ac300393.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_8ed7ac300393.md",
+    "size": 12086,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:43:11.982562+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_0a5845e1c835": {
+    "file_id": "file_0a5845e1c835",
+    "filename": "武汉旅游攻略_3天.md",
+    "stored_name": "file_0a5845e1c835.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_0a5845e1c835.md",
+    "size": 10274,
+    "description": "北京→武汉 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T09:54:05.728642+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_4d0cb7951f05": {
+    "file_id": "file_4d0cb7951f05",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_4d0cb7951f05.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_4d0cb7951f05.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-28T09:57:47.780440+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_3b54d6343c95": {
+    "file_id": "file_3b54d6343c95",
+    "filename": "test_translation.md",
+    "stored_name": "file_3b54d6343c95.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_3b54d6343c95.md",
+    "size": 58,
+    "description": "Test translation input",
+    "tags": [
+      "test"
+    ],
+    "source": "system",
+    "created_at": "2026-07-28T10:03:10.367920+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_382ce6b1e38e": {
+    "file_id": "file_382ce6b1e38e",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_382ce6b1e38e.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_382ce6b1e38e.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T00:34:28.540765+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_82c41b2467c4": {
+    "file_id": "file_82c41b2467c4",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_82c41b2467c4.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_82c41b2467c4.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T00:40:02.396364+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_3033aeecdbf2": {
+    "file_id": "file_3033aeecdbf2",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_3033aeecdbf2.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_3033aeecdbf2.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T00:43:46.723907+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_35fb99867e3f": {
+    "file_id": "file_35fb99867e3f",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_35fb99867e3f.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_35fb99867e3f.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T00:51:41.986958+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_375a2a247f2e": {
+    "file_id": "file_375a2a247f2e",
+    "filename": "待翻译_智能体交易_translated.md",
+    "stored_name": "file_375a2a247f2e.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_375a2a247f2e.md",
+    "size": 1125,
+    "description": "翻译: 待翻译_智能体交易.md (zh→en)",
+    "tags": [
+      "service-output",
+      "translation",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T00:52:36.796637+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_ad4ff6bbe1b2": {
+    "file_id": "file_ad4ff6bbe1b2",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_ad4ff6bbe1b2.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_ad4ff6bbe1b2.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T01:02:16.792950+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_50830525bf1b": {
+    "file_id": "file_50830525bf1b",
+    "filename": "待翻译_智能体交易_translated.md",
+    "stored_name": "file_50830525bf1b.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_50830525bf1b.md",
+    "size": 1162,
+    "description": "翻译: 待翻译_智能体交易.md (zh→en)",
+    "tags": [
+      "service-output",
+      "translation",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T01:03:41.185740+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_353ea2f815f7": {
+    "file_id": "file_353ea2f815f7",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_353ea2f815f7.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_353ea2f815f7.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T01:17:44.392554+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_453d125e7131": {
+    "file_id": "file_453d125e7131",
+    "filename": "待翻译_智能体交易_translated.md",
+    "stored_name": "file_453d125e7131.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_453d125e7131.md",
+    "size": 1174,
+    "description": "翻译: 待翻译_智能体交易.md (zh→ja)",
+    "tags": [
+      "service-output",
+      "translation",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T01:18:38.002596+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_9b4e72577729": {
+    "file_id": "file_9b4e72577729",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_9b4e72577729.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_9b4e72577729.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T01:27:48.758004+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_7567072a1549": {
+    "file_id": "file_7567072a1549",
+    "filename": "待翻译_智能体交易_translated.md",
+    "stored_name": "file_7567072a1549.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_7567072a1549.md",
+    "size": 1104,
+    "description": "翻译: 待翻译_智能体交易.md (zh→ja)",
+    "tags": [
+      "service-output",
+      "translation",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T01:28:30.593653+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_fca7176adf9c": {
+    "file_id": "file_fca7176adf9c",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_fca7176adf9c.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_fca7176adf9c.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T01:39:30.706730+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_f95afd3ac835": {
+    "file_id": "file_f95afd3ac835",
+    "filename": "待翻译_智能体交易_translated.md",
+    "stored_name": "file_f95afd3ac835.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_f95afd3ac835.md",
+    "size": 1341,
+    "description": "翻译: 待翻译_智能体交易.md (zh→ja)",
+    "tags": [
+      "service-output",
+      "translation",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T01:40:17.976876+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_ee315921ae9c": {
+    "file_id": "file_ee315921ae9c",
+    "filename": "待翻译_智能体交易.md",
+    "stored_name": "file_ee315921ae9c.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_ee315921ae9c.md",
+    "size": 888,
+    "description": "用户上传: 待翻译_智能体交易.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T01:56:31.649582+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_a2ccde98e051": {
+    "file_id": "file_a2ccde98e051",
+    "filename": "待翻译_智能体交易_translated.md",
+    "stored_name": "file_a2ccde98e051.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_a2ccde98e051.md",
+    "size": 1365,
+    "description": "翻译: 待翻译_智能体交易.md (zh→ja)",
+    "tags": [
+      "service-output",
+      "translation",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T01:57:18.660766+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_4f0f3894fd4a": {
+    "file_id": "file_4f0f3894fd4a",
+    "filename": "周报模板.md",
+    "stored_name": "file_4f0f3894fd4a.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_4f0f3894fd4a.md",
+    "size": 1155,
+    "description": "用户上传: 周报模板.md",
+    "tags": [
+      "user-upload"
+    ],
+    "source": "user",
+    "created_at": "2026-07-29T01:58:39.520843+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_2b98a9516224": {
+    "file_id": "file_2b98a9516224",
+    "filename": "周报_本周.md",
+    "stored_name": "file_2b98a9516224.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_2b98a9516224.md",
+    "size": 946,
+    "description": "周报 (本周, 3项工作)",
+    "tags": [
+      "service-output",
+      "weekly-report",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T01:59:22.033217+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_404499a4f22e": {
+    "file_id": "file_404499a4f22e",
+    "filename": "武汉旅游攻略_4天.md",
+    "stored_name": "file_404499a4f22e.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_404499a4f22e.md",
+    "size": 12322,
+    "description": "郑州→武汉 4天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T02:01:44.697667+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_d22ab99f6d8a": {
+    "file_id": "file_d22ab99f6d8a",
+    "filename": "杭州旅游攻略_3天.md",
+    "stored_name": "file_d22ab99f6d8a.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_d22ab99f6d8a.md",
+    "size": 11472,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T02:15:38.216602+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_5d1ae75a58db": {
+    "file_id": "file_5d1ae75a58db",
+    "filename": "杭州旅游攻略_3天.md",
+    "stored_name": "file_5d1ae75a58db.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_5d1ae75a58db.md",
+    "size": 13008,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T02:47:31.456583+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_c7a0b0f3656e": {
+    "file_id": "file_c7a0b0f3656e",
+    "filename": "杭州旅游攻略_3天.md",
+    "stored_name": "file_c7a0b0f3656e.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_c7a0b0f3656e.md",
+    "size": 13104,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T03:02:12.288327+00:00",
+    "content_type": "text/markdown"
+  },
+  "file_f0d97c2601dc": {
+    "file_id": "file_f0d97c2601dc",
+    "filename": "杭州旅游攻略_3天.md",
+    "stored_name": "file_f0d97c2601dc.md",
+    "path": "E:\\SenAHo\\书稿编写\\智能体交易案例实践\\act-autonomous-payment-demo\\data\\files\\file_f0d97c2601dc.md",
+    "size": 13158,
+    "description": "北京→杭州 3天旅游攻略",
+    "tags": [
+      "service-output",
+      "travel-guide",
+      "md"
+    ],
+    "source": "system",
+    "created_at": "2026-07-29T03:22:06.063806+00:00",
+    "content_type": "text/markdown"
+  }
+}

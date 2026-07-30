@@ -1,0 +1,2888 @@
+{
+  "dataset_id": "retail-demo-2026",
+  "description": "模拟零售行业数据集 — 12 个月 360 条记录，含趋势和品类分布（教学用途）",
+  "records": [
+    {
+      "month": "2026-01",
+      "sales": 1608.76,
+      "orders": 62,
+      "users": 475,
+      "category": "电子",
+      "avg_order_value": 25.95
+    },
+    {
+      "month": "2026-01",
+      "sales": 1712.82,
+      "orders": 88,
+      "users": 629,
+      "category": "食品",
+      "avg_order_value": 19.46
+    },
+    {
+      "month": "2026-01",
+      "sales": 1429.73,
+      "orders": 46,
+      "users": 397,
+      "category": "食品",
+      "avg_order_value": 31.08
+    },
+    {
+      "month": "2026-01",
+      "sales": 1504.82,
+      "orders": 46,
+      "users": 637,
+      "category": "食品",
+      "avg_order_value": 32.71
+    },
+    {
+      "month": "2026-01",
+      "sales": 1634.9,
+      "orders": 79,
+      "users": 564,
+      "category": "食品",
+      "avg_order_value": 20.69
+    },
+    {
+      "month": "2026-01",
+      "sales": 1580.34,
+      "orders": 45,
+      "users": 431,
+      "category": "食品",
+      "avg_order_value": 35.12
+    },
+    {
+      "month": "2026-01",
+      "sales": 2034.34,
+      "orders": 54,
+      "users": 460,
+      "category": "电子",
+      "avg_order_value": 37.67
+    },
+    {
+      "month": "2026-01",
+      "sales": 947.05,
+      "orders": 50,
+      "users": 544,
+      "category": "美妆",
+      "avg_order_value": 18.94
+    },
+    {
+      "month": "2026-01",
+      "sales": 1812.74,
+      "orders": 83,
+      "users": 485,
+      "category": "食品",
+      "avg_order_value": 21.84
+    },
+    {
+      "month": "2026-01",
+      "sales": 2048.11,
+      "orders": 79,
+      "users": 413,
+      "category": "家居",
+      "avg_order_value": 25.93
+    },
+    {
+      "month": "2026-01",
+      "sales": 973.48,
+      "orders": 80,
+      "users": 500,
+      "category": "美妆",
+      "avg_order_value": 12.17
+    },
+    {
+      "month": "2026-01",
+      "sales": 1928.0,
+      "orders": 68,
+      "users": 645,
+      "category": "家居",
+      "avg_order_value": 28.35
+    },
+    {
+      "month": "2026-01",
+      "sales": 1112.6,
+      "orders": 87,
+      "users": 466,
+      "category": "食品",
+      "avg_order_value": 12.79
+    },
+    {
+      "month": "2026-01",
+      "sales": 2324.04,
+      "orders": 59,
+      "users": 401,
+      "category": "家居",
+      "avg_order_value": 39.39
+    },
+    {
+      "month": "2026-01",
+      "sales": 1312.26,
+      "orders": 68,
+      "users": 433,
+      "category": "服装",
+      "avg_order_value": 19.3
+    },
+    {
+      "month": "2026-01",
+      "sales": 1114.7,
+      "orders": 62,
+      "users": 386,
+      "category": "服装",
+      "avg_order_value": 17.98
+    },
+    {
+      "month": "2026-01",
+      "sales": 1806.04,
+      "orders": 91,
+      "users": 475,
+      "category": "电子",
+      "avg_order_value": 19.85
+    },
+    {
+      "month": "2026-01",
+      "sales": 1391.51,
+      "orders": 85,
+      "users": 635,
+      "category": "食品",
+      "avg_order_value": 16.37
+    },
+    {
+      "month": "2026-01",
+      "sales": 1341.85,
+      "orders": 94,
+      "users": 378,
+      "category": "食品",
+      "avg_order_value": 14.27
+    },
+    {
+      "month": "2026-01",
+      "sales": 1078.89,
+      "orders": 65,
+      "users": 555,
+      "category": "食品",
+      "avg_order_value": 16.6
+    },
+    {
+      "month": "2026-01",
+      "sales": 1115.9,
+      "orders": 81,
+      "users": 511,
+      "category": "服装",
+      "avg_order_value": 13.78
+    },
+    {
+      "month": "2026-01",
+      "sales": 1499.31,
+      "orders": 86,
+      "users": 584,
+      "category": "食品",
+      "avg_order_value": 17.43
+    },
+    {
+      "month": "2026-01",
+      "sales": 1175.67,
+      "orders": 92,
+      "users": 637,
+      "category": "食品",
+      "avg_order_value": 12.78
+    },
+    {
+      "month": "2026-01",
+      "sales": 2583.47,
+      "orders": 72,
+      "users": 648,
+      "category": "电子",
+      "avg_order_value": 35.88
+    },
+    {
+      "month": "2026-01",
+      "sales": 1122.65,
+      "orders": 53,
+      "users": 610,
+      "category": "服装",
+      "avg_order_value": 21.18
+    },
+    {
+      "month": "2026-01",
+      "sales": 2595.31,
+      "orders": 52,
+      "users": 428,
+      "category": "电子",
+      "avg_order_value": 49.91
+    },
+    {
+      "month": "2026-01",
+      "sales": 2644.31,
+      "orders": 72,
+      "users": 382,
+      "category": "电子",
+      "avg_order_value": 36.73
+    },
+    {
+      "month": "2026-01",
+      "sales": 1427.67,
+      "orders": 74,
+      "users": 620,
+      "category": "服装",
+      "avg_order_value": 19.29
+    },
+    {
+      "month": "2026-01",
+      "sales": 1393.11,
+      "orders": 45,
+      "users": 408,
+      "category": "服装",
+      "avg_order_value": 30.96
+    },
+    {
+      "month": "2026-01",
+      "sales": 2299.91,
+      "orders": 62,
+      "users": 524,
+      "category": "电子",
+      "avg_order_value": 37.1
+    },
+    {
+      "month": "2026-02",
+      "sales": 1590.22,
+      "orders": 74,
+      "users": 351,
+      "category": "食品",
+      "avg_order_value": 21.49
+    },
+    {
+      "month": "2026-02",
+      "sales": 1419.76,
+      "orders": 61,
+      "users": 606,
+      "category": "美妆",
+      "avg_order_value": 23.27
+    },
+    {
+      "month": "2026-02",
+      "sales": 1995.15,
+      "orders": 51,
+      "users": 502,
+      "category": "家居",
+      "avg_order_value": 39.12
+    },
+    {
+      "month": "2026-02",
+      "sales": 1995.13,
+      "orders": 57,
+      "users": 428,
+      "category": "家居",
+      "avg_order_value": 35.0
+    },
+    {
+      "month": "2026-02",
+      "sales": 1187.03,
+      "orders": 94,
+      "users": 621,
+      "category": "服装",
+      "avg_order_value": 12.63
+    },
+    {
+      "month": "2026-02",
+      "sales": 1227.28,
+      "orders": 76,
+      "users": 359,
+      "category": "美妆",
+      "avg_order_value": 16.15
+    },
+    {
+      "month": "2026-02",
+      "sales": 1518.94,
+      "orders": 64,
+      "users": 472,
+      "category": "食品",
+      "avg_order_value": 23.73
+    },
+    {
+      "month": "2026-02",
+      "sales": 2030.36,
+      "orders": 50,
+      "users": 393,
+      "category": "食品",
+      "avg_order_value": 40.61
+    },
+    {
+      "month": "2026-02",
+      "sales": 2362.57,
+      "orders": 93,
+      "users": 622,
+      "category": "家居",
+      "avg_order_value": 25.4
+    },
+    {
+      "month": "2026-02",
+      "sales": 1543.19,
+      "orders": 75,
+      "users": 631,
+      "category": "家居",
+      "avg_order_value": 20.58
+    },
+    {
+      "month": "2026-02",
+      "sales": 1682.48,
+      "orders": 83,
+      "users": 566,
+      "category": "食品",
+      "avg_order_value": 20.27
+    },
+    {
+      "month": "2026-02",
+      "sales": 1456.64,
+      "orders": 93,
+      "users": 452,
+      "category": "美妆",
+      "avg_order_value": 15.66
+    },
+    {
+      "month": "2026-02",
+      "sales": 1865.64,
+      "orders": 87,
+      "users": 541,
+      "category": "家居",
+      "avg_order_value": 21.44
+    },
+    {
+      "month": "2026-02",
+      "sales": 2508.68,
+      "orders": 52,
+      "users": 476,
+      "category": "电子",
+      "avg_order_value": 48.24
+    },
+    {
+      "month": "2026-02",
+      "sales": 1494.22,
+      "orders": 82,
+      "users": 633,
+      "category": "食品",
+      "avg_order_value": 18.22
+    },
+    {
+      "month": "2026-02",
+      "sales": 1377.18,
+      "orders": 49,
+      "users": 380,
+      "category": "食品",
+      "avg_order_value": 28.11
+    },
+    {
+      "month": "2026-02",
+      "sales": 2057.58,
+      "orders": 66,
+      "users": 386,
+      "category": "食品",
+      "avg_order_value": 31.18
+    },
+    {
+      "month": "2026-02",
+      "sales": 2152.54,
+      "orders": 76,
+      "users": 459,
+      "category": "电子",
+      "avg_order_value": 28.32
+    },
+    {
+      "month": "2026-02",
+      "sales": 2815.18,
+      "orders": 81,
+      "users": 645,
+      "category": "电子",
+      "avg_order_value": 34.76
+    },
+    {
+      "month": "2026-02",
+      "sales": 2906.44,
+      "orders": 71,
+      "users": 447,
+      "category": "电子",
+      "avg_order_value": 40.94
+    },
+    {
+      "month": "2026-02",
+      "sales": 1812.87,
+      "orders": 67,
+      "users": 566,
+      "category": "食品",
+      "avg_order_value": 27.06
+    },
+    {
+      "month": "2026-02",
+      "sales": 3024.43,
+      "orders": 48,
+      "users": 400,
+      "category": "电子",
+      "avg_order_value": 63.01
+    },
+    {
+      "month": "2026-02",
+      "sales": 1881.62,
+      "orders": 51,
+      "users": 477,
+      "category": "食品",
+      "avg_order_value": 36.89
+    },
+    {
+      "month": "2026-02",
+      "sales": 1691.03,
+      "orders": 53,
+      "users": 566,
+      "category": "食品",
+      "avg_order_value": 31.91
+    },
+    {
+      "month": "2026-02",
+      "sales": 1617.89,
+      "orders": 49,
+      "users": 576,
+      "category": "食品",
+      "avg_order_value": 33.02
+    },
+    {
+      "month": "2026-02",
+      "sales": 2410.17,
+      "orders": 51,
+      "users": 375,
+      "category": "家居",
+      "avg_order_value": 47.26
+    },
+    {
+      "month": "2026-02",
+      "sales": 2542.96,
+      "orders": 45,
+      "users": 397,
+      "category": "电子",
+      "avg_order_value": 56.51
+    },
+    {
+      "month": "2026-02",
+      "sales": 1400.88,
+      "orders": 55,
+      "users": 558,
+      "category": "美妆",
+      "avg_order_value": 25.47
+    },
+    {
+      "month": "2026-02",
+      "sales": 2056.13,
+      "orders": 70,
+      "users": 380,
+      "category": "电子",
+      "avg_order_value": 29.37
+    },
+    {
+      "month": "2026-02",
+      "sales": 1160.64,
+      "orders": 69,
+      "users": 485,
+      "category": "食品",
+      "avg_order_value": 16.82
+    },
+    {
+      "month": "2026-03",
+      "sales": 1483.76,
+      "orders": 63,
+      "users": 566,
+      "category": "美妆",
+      "avg_order_value": 23.55
+    },
+    {
+      "month": "2026-03",
+      "sales": 3090.49,
+      "orders": 95,
+      "users": 634,
+      "category": "电子",
+      "avg_order_value": 32.53
+    },
+    {
+      "month": "2026-03",
+      "sales": 2693.29,
+      "orders": 57,
+      "users": 501,
+      "category": "电子",
+      "avg_order_value": 47.25
+    },
+    {
+      "month": "2026-03",
+      "sales": 1330.51,
+      "orders": 92,
+      "users": 627,
+      "category": "食品",
+      "avg_order_value": 14.46
+    },
+    {
+      "month": "2026-03",
+      "sales": 1607.57,
+      "orders": 48,
+      "users": 649,
+      "category": "食品",
+      "avg_order_value": 33.49
+    },
+    {
+      "month": "2026-03",
+      "sales": 3398.18,
+      "orders": 78,
+      "users": 430,
+      "category": "电子",
+      "avg_order_value": 43.57
+    },
+    {
+      "month": "2026-03",
+      "sales": 1818.5,
+      "orders": 56,
+      "users": 385,
+      "category": "食品",
+      "avg_order_value": 32.47
+    },
+    {
+      "month": "2026-03",
+      "sales": 3000.42,
+      "orders": 60,
+      "users": 556,
+      "category": "电子",
+      "avg_order_value": 50.01
+    },
+    {
+      "month": "2026-03",
+      "sales": 2233.85,
+      "orders": 60,
+      "users": 646,
+      "category": "食品",
+      "avg_order_value": 37.23
+    },
+    {
+      "month": "2026-03",
+      "sales": 2909.47,
+      "orders": 71,
+      "users": 648,
+      "category": "电子",
+      "avg_order_value": 40.98
+    },
+    {
+      "month": "2026-03",
+      "sales": 2415.87,
+      "orders": 61,
+      "users": 454,
+      "category": "电子",
+      "avg_order_value": 39.6
+    },
+    {
+      "month": "2026-03",
+      "sales": 2412.31,
+      "orders": 61,
+      "users": 552,
+      "category": "电子",
+      "avg_order_value": 39.55
+    },
+    {
+      "month": "2026-03",
+      "sales": 1968.01,
+      "orders": 74,
+      "users": 511,
+      "category": "食品",
+      "avg_order_value": 26.59
+    },
+    {
+      "month": "2026-03",
+      "sales": 1598.25,
+      "orders": 45,
+      "users": 584,
+      "category": "美妆",
+      "avg_order_value": 35.52
+    },
+    {
+      "month": "2026-03",
+      "sales": 2817.62,
+      "orders": 51,
+      "users": 387,
+      "category": "电子",
+      "avg_order_value": 55.25
+    },
+    {
+      "month": "2026-03",
+      "sales": 2724.59,
+      "orders": 53,
+      "users": 528,
+      "category": "电子",
+      "avg_order_value": 51.41
+    },
+    {
+      "month": "2026-03",
+      "sales": 1555.32,
+      "orders": 68,
+      "users": 495,
+      "category": "美妆",
+      "avg_order_value": 22.87
+    },
+    {
+      "month": "2026-03",
+      "sales": 2172.45,
+      "orders": 90,
+      "users": 504,
+      "category": "食品",
+      "avg_order_value": 24.14
+    },
+    {
+      "month": "2026-03",
+      "sales": 3508.7,
+      "orders": 86,
+      "users": 620,
+      "category": "电子",
+      "avg_order_value": 40.8
+    },
+    {
+      "month": "2026-03",
+      "sales": 2154.38,
+      "orders": 64,
+      "users": 403,
+      "category": "食品",
+      "avg_order_value": 33.66
+    },
+    {
+      "month": "2026-03",
+      "sales": 988.99,
+      "orders": 52,
+      "users": 404,
+      "category": "美妆",
+      "avg_order_value": 19.02
+    },
+    {
+      "month": "2026-03",
+      "sales": 1722.98,
+      "orders": 63,
+      "users": 457,
+      "category": "家居",
+      "avg_order_value": 27.35
+    },
+    {
+      "month": "2026-03",
+      "sales": 1785.73,
+      "orders": 85,
+      "users": 485,
+      "category": "家居",
+      "avg_order_value": 21.01
+    },
+    {
+      "month": "2026-03",
+      "sales": 2309.58,
+      "orders": 48,
+      "users": 397,
+      "category": "电子",
+      "avg_order_value": 48.12
+    },
+    {
+      "month": "2026-03",
+      "sales": 3251.51,
+      "orders": 47,
+      "users": 351,
+      "category": "电子",
+      "avg_order_value": 69.18
+    },
+    {
+      "month": "2026-03",
+      "sales": 1268.16,
+      "orders": 61,
+      "users": 432,
+      "category": "服装",
+      "avg_order_value": 20.79
+    },
+    {
+      "month": "2026-03",
+      "sales": 2239.35,
+      "orders": 72,
+      "users": 637,
+      "category": "家居",
+      "avg_order_value": 31.1
+    },
+    {
+      "month": "2026-03",
+      "sales": 1348.71,
+      "orders": 89,
+      "users": 426,
+      "category": "食品",
+      "avg_order_value": 15.15
+    },
+    {
+      "month": "2026-03",
+      "sales": 3260.06,
+      "orders": 82,
+      "users": 632,
+      "category": "电子",
+      "avg_order_value": 39.76
+    },
+    {
+      "month": "2026-03",
+      "sales": 1405.41,
+      "orders": 64,
+      "users": 536,
+      "category": "食品",
+      "avg_order_value": 21.96
+    },
+    {
+      "month": "2026-04",
+      "sales": 1619.89,
+      "orders": 47,
+      "users": 533,
+      "category": "美妆",
+      "avg_order_value": 34.47
+    },
+    {
+      "month": "2026-04",
+      "sales": 1669.7,
+      "orders": 51,
+      "users": 531,
+      "category": "食品",
+      "avg_order_value": 32.74
+    },
+    {
+      "month": "2026-04",
+      "sales": 2901.47,
+      "orders": 71,
+      "users": 429,
+      "category": "家居",
+      "avg_order_value": 40.87
+    },
+    {
+      "month": "2026-04",
+      "sales": 1158.23,
+      "orders": 55,
+      "users": 440,
+      "category": "美妆",
+      "avg_order_value": 21.06
+    },
+    {
+      "month": "2026-04",
+      "sales": 983.31,
+      "orders": 92,
+      "users": 520,
+      "category": "美妆",
+      "avg_order_value": 10.69
+    },
+    {
+      "month": "2026-04",
+      "sales": 2233.09,
+      "orders": 87,
+      "users": 477,
+      "category": "家居",
+      "avg_order_value": 25.67
+    },
+    {
+      "month": "2026-04",
+      "sales": 2073.43,
+      "orders": 51,
+      "users": 545,
+      "category": "服装",
+      "avg_order_value": 40.66
+    },
+    {
+      "month": "2026-04",
+      "sales": 2865.34,
+      "orders": 59,
+      "users": 452,
+      "category": "家居",
+      "avg_order_value": 48.57
+    },
+    {
+      "month": "2026-04",
+      "sales": 2301.84,
+      "orders": 64,
+      "users": 466,
+      "category": "家居",
+      "avg_order_value": 35.97
+    },
+    {
+      "month": "2026-04",
+      "sales": 2153.68,
+      "orders": 70,
+      "users": 518,
+      "category": "食品",
+      "avg_order_value": 30.77
+    },
+    {
+      "month": "2026-04",
+      "sales": 1311.61,
+      "orders": 94,
+      "users": 492,
+      "category": "服装",
+      "avg_order_value": 13.95
+    },
+    {
+      "month": "2026-04",
+      "sales": 1778.48,
+      "orders": 88,
+      "users": 624,
+      "category": "服装",
+      "avg_order_value": 20.21
+    },
+    {
+      "month": "2026-04",
+      "sales": 1267.24,
+      "orders": 61,
+      "users": 441,
+      "category": "服装",
+      "avg_order_value": 20.77
+    },
+    {
+      "month": "2026-04",
+      "sales": 3802.66,
+      "orders": 47,
+      "users": 405,
+      "category": "电子",
+      "avg_order_value": 80.91
+    },
+    {
+      "month": "2026-04",
+      "sales": 2674.6,
+      "orders": 95,
+      "users": 510,
+      "category": "电子",
+      "avg_order_value": 28.15
+    },
+    {
+      "month": "2026-04",
+      "sales": 3803.87,
+      "orders": 52,
+      "users": 547,
+      "category": "电子",
+      "avg_order_value": 73.15
+    },
+    {
+      "month": "2026-04",
+      "sales": 1119.72,
+      "orders": 47,
+      "users": 573,
+      "category": "美妆",
+      "avg_order_value": 23.82
+    },
+    {
+      "month": "2026-04",
+      "sales": 2466.75,
+      "orders": 79,
+      "users": 450,
+      "category": "食品",
+      "avg_order_value": 31.22
+    },
+    {
+      "month": "2026-04",
+      "sales": 1312.2,
+      "orders": 87,
+      "users": 519,
+      "category": "服装",
+      "avg_order_value": 15.08
+    },
+    {
+      "month": "2026-04",
+      "sales": 3236.45,
+      "orders": 52,
+      "users": 503,
+      "category": "电子",
+      "avg_order_value": 62.24
+    },
+    {
+      "month": "2026-04",
+      "sales": 3242.65,
+      "orders": 65,
+      "users": 556,
+      "category": "电子",
+      "avg_order_value": 49.89
+    },
+    {
+      "month": "2026-04",
+      "sales": 3043.73,
+      "orders": 57,
+      "users": 565,
+      "category": "电子",
+      "avg_order_value": 53.4
+    },
+    {
+      "month": "2026-04",
+      "sales": 2733.77,
+      "orders": 92,
+      "users": 439,
+      "category": "电子",
+      "avg_order_value": 29.71
+    },
+    {
+      "month": "2026-04",
+      "sales": 2595.48,
+      "orders": 80,
+      "users": 350,
+      "category": "电子",
+      "avg_order_value": 32.44
+    },
+    {
+      "month": "2026-04",
+      "sales": 1460.97,
+      "orders": 95,
+      "users": 646,
+      "category": "服装",
+      "avg_order_value": 15.38
+    },
+    {
+      "month": "2026-04",
+      "sales": 2633.15,
+      "orders": 73,
+      "users": 576,
+      "category": "电子",
+      "avg_order_value": 36.07
+    },
+    {
+      "month": "2026-04",
+      "sales": 2967.26,
+      "orders": 95,
+      "users": 436,
+      "category": "电子",
+      "avg_order_value": 31.23
+    },
+    {
+      "month": "2026-04",
+      "sales": 2565.13,
+      "orders": 87,
+      "users": 521,
+      "category": "电子",
+      "avg_order_value": 29.48
+    },
+    {
+      "month": "2026-04",
+      "sales": 2497.91,
+      "orders": 60,
+      "users": 508,
+      "category": "食品",
+      "avg_order_value": 41.63
+    },
+    {
+      "month": "2026-04",
+      "sales": 1610.27,
+      "orders": 46,
+      "users": 373,
+      "category": "食品",
+      "avg_order_value": 35.01
+    },
+    {
+      "month": "2026-05",
+      "sales": 2088.37,
+      "orders": 94,
+      "users": 387,
+      "category": "食品",
+      "avg_order_value": 22.22
+    },
+    {
+      "month": "2026-05",
+      "sales": 3916.75,
+      "orders": 81,
+      "users": 449,
+      "category": "电子",
+      "avg_order_value": 48.35
+    },
+    {
+      "month": "2026-05",
+      "sales": 2366.9,
+      "orders": 70,
+      "users": 474,
+      "category": "家居",
+      "avg_order_value": 33.81
+    },
+    {
+      "month": "2026-05",
+      "sales": 2358.66,
+      "orders": 93,
+      "users": 404,
+      "category": "食品",
+      "avg_order_value": 25.36
+    },
+    {
+      "month": "2026-05",
+      "sales": 2114.84,
+      "orders": 89,
+      "users": 615,
+      "category": "家居",
+      "avg_order_value": 23.76
+    },
+    {
+      "month": "2026-05",
+      "sales": 3289.53,
+      "orders": 52,
+      "users": 583,
+      "category": "电子",
+      "avg_order_value": 63.26
+    },
+    {
+      "month": "2026-05",
+      "sales": 2075.03,
+      "orders": 78,
+      "users": 636,
+      "category": "食品",
+      "avg_order_value": 26.6
+    },
+    {
+      "month": "2026-05",
+      "sales": 4038.68,
+      "orders": 73,
+      "users": 608,
+      "category": "电子",
+      "avg_order_value": 55.32
+    },
+    {
+      "month": "2026-05",
+      "sales": 3956.28,
+      "orders": 73,
+      "users": 431,
+      "category": "电子",
+      "avg_order_value": 54.2
+    },
+    {
+      "month": "2026-05",
+      "sales": 2505.34,
+      "orders": 61,
+      "users": 476,
+      "category": "家居",
+      "avg_order_value": 41.07
+    },
+    {
+      "month": "2026-05",
+      "sales": 2204.09,
+      "orders": 94,
+      "users": 616,
+      "category": "家居",
+      "avg_order_value": 23.45
+    },
+    {
+      "month": "2026-05",
+      "sales": 2682.48,
+      "orders": 73,
+      "users": 389,
+      "category": "电子",
+      "avg_order_value": 36.75
+    },
+    {
+      "month": "2026-05",
+      "sales": 2138.73,
+      "orders": 66,
+      "users": 513,
+      "category": "家居",
+      "avg_order_value": 32.41
+    },
+    {
+      "month": "2026-05",
+      "sales": 1110.55,
+      "orders": 54,
+      "users": 468,
+      "category": "美妆",
+      "avg_order_value": 20.57
+    },
+    {
+      "month": "2026-05",
+      "sales": 1510.53,
+      "orders": 58,
+      "users": 382,
+      "category": "服装",
+      "avg_order_value": 26.04
+    },
+    {
+      "month": "2026-05",
+      "sales": 2857.32,
+      "orders": 74,
+      "users": 562,
+      "category": "电子",
+      "avg_order_value": 38.61
+    },
+    {
+      "month": "2026-05",
+      "sales": 2543.44,
+      "orders": 69,
+      "users": 649,
+      "category": "食品",
+      "avg_order_value": 36.86
+    },
+    {
+      "month": "2026-05",
+      "sales": 1056.19,
+      "orders": 93,
+      "users": 644,
+      "category": "美妆",
+      "avg_order_value": 11.36
+    },
+    {
+      "month": "2026-05",
+      "sales": 1342.35,
+      "orders": 67,
+      "users": 502,
+      "category": "服装",
+      "avg_order_value": 20.04
+    },
+    {
+      "month": "2026-05",
+      "sales": 3083.5,
+      "orders": 71,
+      "users": 625,
+      "category": "家居",
+      "avg_order_value": 43.43
+    },
+    {
+      "month": "2026-05",
+      "sales": 2614.42,
+      "orders": 83,
+      "users": 462,
+      "category": "家居",
+      "avg_order_value": 31.5
+    },
+    {
+      "month": "2026-05",
+      "sales": 2746.76,
+      "orders": 76,
+      "users": 364,
+      "category": "电子",
+      "avg_order_value": 36.14
+    },
+    {
+      "month": "2026-05",
+      "sales": 2101.33,
+      "orders": 70,
+      "users": 434,
+      "category": "服装",
+      "avg_order_value": 30.02
+    },
+    {
+      "month": "2026-05",
+      "sales": 3184.39,
+      "orders": 84,
+      "users": 623,
+      "category": "家居",
+      "avg_order_value": 37.91
+    },
+    {
+      "month": "2026-05",
+      "sales": 1985.19,
+      "orders": 81,
+      "users": 363,
+      "category": "食品",
+      "avg_order_value": 24.51
+    },
+    {
+      "month": "2026-05",
+      "sales": 2029.2,
+      "orders": 74,
+      "users": 443,
+      "category": "食品",
+      "avg_order_value": 27.42
+    },
+    {
+      "month": "2026-05",
+      "sales": 1966.22,
+      "orders": 58,
+      "users": 582,
+      "category": "食品",
+      "avg_order_value": 33.9
+    },
+    {
+      "month": "2026-05",
+      "sales": 2207.06,
+      "orders": 69,
+      "users": 492,
+      "category": "服装",
+      "avg_order_value": 31.99
+    },
+    {
+      "month": "2026-05",
+      "sales": 3050.65,
+      "orders": 61,
+      "users": 391,
+      "category": "家居",
+      "avg_order_value": 50.01
+    },
+    {
+      "month": "2026-05",
+      "sales": 3655.14,
+      "orders": 48,
+      "users": 529,
+      "category": "电子",
+      "avg_order_value": 76.15
+    },
+    {
+      "month": "2026-06",
+      "sales": 1686.16,
+      "orders": 86,
+      "users": 370,
+      "category": "食品",
+      "avg_order_value": 19.61
+    },
+    {
+      "month": "2026-06",
+      "sales": 3466.46,
+      "orders": 57,
+      "users": 360,
+      "category": "家居",
+      "avg_order_value": 60.82
+    },
+    {
+      "month": "2026-06",
+      "sales": 2877.17,
+      "orders": 75,
+      "users": 408,
+      "category": "电子",
+      "avg_order_value": 38.36
+    },
+    {
+      "month": "2026-06",
+      "sales": 2835.03,
+      "orders": 89,
+      "users": 481,
+      "category": "电子",
+      "avg_order_value": 31.85
+    },
+    {
+      "month": "2026-06",
+      "sales": 2185.84,
+      "orders": 83,
+      "users": 408,
+      "category": "家居",
+      "avg_order_value": 26.34
+    },
+    {
+      "month": "2026-06",
+      "sales": 2179.25,
+      "orders": 64,
+      "users": 405,
+      "category": "家居",
+      "avg_order_value": 34.05
+    },
+    {
+      "month": "2026-06",
+      "sales": 4290.65,
+      "orders": 81,
+      "users": 542,
+      "category": "电子",
+      "avg_order_value": 52.97
+    },
+    {
+      "month": "2026-06",
+      "sales": 2311.65,
+      "orders": 49,
+      "users": 474,
+      "category": "服装",
+      "avg_order_value": 47.18
+    },
+    {
+      "month": "2026-06",
+      "sales": 2646.94,
+      "orders": 88,
+      "users": 411,
+      "category": "食品",
+      "avg_order_value": 30.08
+    },
+    {
+      "month": "2026-06",
+      "sales": 2838.0,
+      "orders": 47,
+      "users": 527,
+      "category": "家居",
+      "avg_order_value": 60.38
+    },
+    {
+      "month": "2026-06",
+      "sales": 3743.21,
+      "orders": 49,
+      "users": 609,
+      "category": "电子",
+      "avg_order_value": 76.39
+    },
+    {
+      "month": "2026-06",
+      "sales": 2414.66,
+      "orders": 71,
+      "users": 600,
+      "category": "电子",
+      "avg_order_value": 34.01
+    },
+    {
+      "month": "2026-06",
+      "sales": 2903.98,
+      "orders": 85,
+      "users": 585,
+      "category": "食品",
+      "avg_order_value": 34.16
+    },
+    {
+      "month": "2026-06",
+      "sales": 2624.33,
+      "orders": 91,
+      "users": 617,
+      "category": "家居",
+      "avg_order_value": 28.84
+    },
+    {
+      "month": "2026-06",
+      "sales": 1372.81,
+      "orders": 79,
+      "users": 597,
+      "category": "美妆",
+      "avg_order_value": 17.38
+    },
+    {
+      "month": "2026-06",
+      "sales": 4079.44,
+      "orders": 82,
+      "users": 487,
+      "category": "电子",
+      "avg_order_value": 49.75
+    },
+    {
+      "month": "2026-06",
+      "sales": 1734.84,
+      "orders": 50,
+      "users": 492,
+      "category": "服装",
+      "avg_order_value": 34.7
+    },
+    {
+      "month": "2026-06",
+      "sales": 1347.76,
+      "orders": 74,
+      "users": 641,
+      "category": "美妆",
+      "avg_order_value": 18.21
+    },
+    {
+      "month": "2026-06",
+      "sales": 3164.73,
+      "orders": 46,
+      "users": 603,
+      "category": "电子",
+      "avg_order_value": 68.8
+    },
+    {
+      "month": "2026-06",
+      "sales": 2208.85,
+      "orders": 58,
+      "users": 531,
+      "category": "家居",
+      "avg_order_value": 38.08
+    },
+    {
+      "month": "2026-06",
+      "sales": 2468.48,
+      "orders": 83,
+      "users": 491,
+      "category": "家居",
+      "avg_order_value": 29.74
+    },
+    {
+      "month": "2026-06",
+      "sales": 3446.54,
+      "orders": 57,
+      "users": 393,
+      "category": "电子",
+      "avg_order_value": 60.47
+    },
+    {
+      "month": "2026-06",
+      "sales": 2147.27,
+      "orders": 80,
+      "users": 473,
+      "category": "食品",
+      "avg_order_value": 26.84
+    },
+    {
+      "month": "2026-06",
+      "sales": 3711.24,
+      "orders": 76,
+      "users": 579,
+      "category": "电子",
+      "avg_order_value": 48.83
+    },
+    {
+      "month": "2026-06",
+      "sales": 2063.42,
+      "orders": 59,
+      "users": 557,
+      "category": "家居",
+      "avg_order_value": 34.97
+    },
+    {
+      "month": "2026-06",
+      "sales": 3015.71,
+      "orders": 82,
+      "users": 538,
+      "category": "电子",
+      "avg_order_value": 36.78
+    },
+    {
+      "month": "2026-06",
+      "sales": 3475.81,
+      "orders": 72,
+      "users": 631,
+      "category": "电子",
+      "avg_order_value": 48.28
+    },
+    {
+      "month": "2026-06",
+      "sales": 2296.71,
+      "orders": 62,
+      "users": 506,
+      "category": "服装",
+      "avg_order_value": 37.04
+    },
+    {
+      "month": "2026-06",
+      "sales": 1581.48,
+      "orders": 57,
+      "users": 511,
+      "category": "服装",
+      "avg_order_value": 27.75
+    },
+    {
+      "month": "2026-06",
+      "sales": 2323.95,
+      "orders": 93,
+      "users": 444,
+      "category": "食品",
+      "avg_order_value": 24.99
+    },
+    {
+      "month": "2026-07",
+      "sales": 2777.89,
+      "orders": 62,
+      "users": 618,
+      "category": "食品",
+      "avg_order_value": 44.8
+    },
+    {
+      "month": "2026-07",
+      "sales": 4695.88,
+      "orders": 57,
+      "users": 501,
+      "category": "电子",
+      "avg_order_value": 82.38
+    },
+    {
+      "month": "2026-07",
+      "sales": 1962.63,
+      "orders": 45,
+      "users": 623,
+      "category": "食品",
+      "avg_order_value": 43.61
+    },
+    {
+      "month": "2026-07",
+      "sales": 1767.36,
+      "orders": 48,
+      "users": 633,
+      "category": "食品",
+      "avg_order_value": 36.82
+    },
+    {
+      "month": "2026-07",
+      "sales": 2769.73,
+      "orders": 85,
+      "users": 601,
+      "category": "服装",
+      "avg_order_value": 32.59
+    },
+    {
+      "month": "2026-07",
+      "sales": 1718.88,
+      "orders": 63,
+      "users": 590,
+      "category": "食品",
+      "avg_order_value": 27.28
+    },
+    {
+      "month": "2026-07",
+      "sales": 3296.62,
+      "orders": 48,
+      "users": 479,
+      "category": "电子",
+      "avg_order_value": 68.68
+    },
+    {
+      "month": "2026-07",
+      "sales": 1678.27,
+      "orders": 49,
+      "users": 555,
+      "category": "美妆",
+      "avg_order_value": 34.25
+    },
+    {
+      "month": "2026-07",
+      "sales": 3813.45,
+      "orders": 88,
+      "users": 377,
+      "category": "电子",
+      "avg_order_value": 43.33
+    },
+    {
+      "month": "2026-07",
+      "sales": 2883.65,
+      "orders": 64,
+      "users": 393,
+      "category": "食品",
+      "avg_order_value": 45.06
+    },
+    {
+      "month": "2026-07",
+      "sales": 1311.59,
+      "orders": 93,
+      "users": 563,
+      "category": "美妆",
+      "avg_order_value": 14.1
+    },
+    {
+      "month": "2026-07",
+      "sales": 4280.85,
+      "orders": 59,
+      "users": 617,
+      "category": "电子",
+      "avg_order_value": 72.56
+    },
+    {
+      "month": "2026-07",
+      "sales": 2723.04,
+      "orders": 64,
+      "users": 569,
+      "category": "服装",
+      "avg_order_value": 42.55
+    },
+    {
+      "month": "2026-07",
+      "sales": 2345.81,
+      "orders": 84,
+      "users": 400,
+      "category": "服装",
+      "avg_order_value": 27.93
+    },
+    {
+      "month": "2026-07",
+      "sales": 1402.77,
+      "orders": 58,
+      "users": 485,
+      "category": "美妆",
+      "avg_order_value": 24.19
+    },
+    {
+      "month": "2026-07",
+      "sales": 2894.98,
+      "orders": 56,
+      "users": 632,
+      "category": "电子",
+      "avg_order_value": 51.7
+    },
+    {
+      "month": "2026-07",
+      "sales": 1704.9,
+      "orders": 73,
+      "users": 590,
+      "category": "食品",
+      "avg_order_value": 23.35
+    },
+    {
+      "month": "2026-07",
+      "sales": 1834.64,
+      "orders": 90,
+      "users": 494,
+      "category": "服装",
+      "avg_order_value": 20.38
+    },
+    {
+      "month": "2026-07",
+      "sales": 2835.57,
+      "orders": 88,
+      "users": 469,
+      "category": "家居",
+      "avg_order_value": 32.22
+    },
+    {
+      "month": "2026-07",
+      "sales": 1994.76,
+      "orders": 85,
+      "users": 451,
+      "category": "美妆",
+      "avg_order_value": 23.47
+    },
+    {
+      "month": "2026-07",
+      "sales": 3742.46,
+      "orders": 86,
+      "users": 426,
+      "category": "电子",
+      "avg_order_value": 43.52
+    },
+    {
+      "month": "2026-07",
+      "sales": 2034.36,
+      "orders": 49,
+      "users": 380,
+      "category": "美妆",
+      "avg_order_value": 41.52
+    },
+    {
+      "month": "2026-07",
+      "sales": 2149.5,
+      "orders": 92,
+      "users": 641,
+      "category": "食品",
+      "avg_order_value": 23.36
+    },
+    {
+      "month": "2026-07",
+      "sales": 1638.9,
+      "orders": 74,
+      "users": 505,
+      "category": "美妆",
+      "avg_order_value": 22.15
+    },
+    {
+      "month": "2026-07",
+      "sales": 4613.13,
+      "orders": 77,
+      "users": 626,
+      "category": "电子",
+      "avg_order_value": 59.91
+    },
+    {
+      "month": "2026-07",
+      "sales": 2727.43,
+      "orders": 47,
+      "users": 571,
+      "category": "电子",
+      "avg_order_value": 58.03
+    },
+    {
+      "month": "2026-07",
+      "sales": 3097.46,
+      "orders": 46,
+      "users": 396,
+      "category": "家居",
+      "avg_order_value": 67.34
+    },
+    {
+      "month": "2026-07",
+      "sales": 2684.13,
+      "orders": 81,
+      "users": 650,
+      "category": "食品",
+      "avg_order_value": 33.14
+    },
+    {
+      "month": "2026-07",
+      "sales": 2210.86,
+      "orders": 88,
+      "users": 487,
+      "category": "美妆",
+      "avg_order_value": 25.12
+    },
+    {
+      "month": "2026-07",
+      "sales": 4220.42,
+      "orders": 56,
+      "users": 590,
+      "category": "电子",
+      "avg_order_value": 75.36
+    },
+    {
+      "month": "2026-08",
+      "sales": 3743.1,
+      "orders": 62,
+      "users": 442,
+      "category": "电子",
+      "avg_order_value": 60.37
+    },
+    {
+      "month": "2026-08",
+      "sales": 1739.89,
+      "orders": 76,
+      "users": 396,
+      "category": "美妆",
+      "avg_order_value": 22.89
+    },
+    {
+      "month": "2026-08",
+      "sales": 3664.27,
+      "orders": 65,
+      "users": 403,
+      "category": "电子",
+      "avg_order_value": 56.37
+    },
+    {
+      "month": "2026-08",
+      "sales": 2785.23,
+      "orders": 89,
+      "users": 603,
+      "category": "家居",
+      "avg_order_value": 31.29
+    },
+    {
+      "month": "2026-08",
+      "sales": 2947.95,
+      "orders": 93,
+      "users": 631,
+      "category": "服装",
+      "avg_order_value": 31.7
+    },
+    {
+      "month": "2026-08",
+      "sales": 1946.08,
+      "orders": 61,
+      "users": 515,
+      "category": "食品",
+      "avg_order_value": 31.9
+    },
+    {
+      "month": "2026-08",
+      "sales": 3007.72,
+      "orders": 77,
+      "users": 350,
+      "category": "食品",
+      "avg_order_value": 39.06
+    },
+    {
+      "month": "2026-08",
+      "sales": 3976.59,
+      "orders": 71,
+      "users": 377,
+      "category": "电子",
+      "avg_order_value": 56.01
+    },
+    {
+      "month": "2026-08",
+      "sales": 2370.62,
+      "orders": 93,
+      "users": 605,
+      "category": "食品",
+      "avg_order_value": 25.49
+    },
+    {
+      "month": "2026-08",
+      "sales": 4482.37,
+      "orders": 58,
+      "users": 486,
+      "category": "电子",
+      "avg_order_value": 77.28
+    },
+    {
+      "month": "2026-08",
+      "sales": 4872.48,
+      "orders": 73,
+      "users": 598,
+      "category": "电子",
+      "avg_order_value": 66.75
+    },
+    {
+      "month": "2026-08",
+      "sales": 3318.85,
+      "orders": 83,
+      "users": 472,
+      "category": "食品",
+      "avg_order_value": 39.99
+    },
+    {
+      "month": "2026-08",
+      "sales": 2749.77,
+      "orders": 45,
+      "users": 632,
+      "category": "家居",
+      "avg_order_value": 61.11
+    },
+    {
+      "month": "2026-08",
+      "sales": 3237.02,
+      "orders": 52,
+      "users": 586,
+      "category": "电子",
+      "avg_order_value": 62.25
+    },
+    {
+      "month": "2026-08",
+      "sales": 1969.87,
+      "orders": 54,
+      "users": 605,
+      "category": "美妆",
+      "avg_order_value": 36.48
+    },
+    {
+      "month": "2026-08",
+      "sales": 1583.52,
+      "orders": 90,
+      "users": 489,
+      "category": "美妆",
+      "avg_order_value": 17.59
+    },
+    {
+      "month": "2026-08",
+      "sales": 3836.79,
+      "orders": 75,
+      "users": 474,
+      "category": "电子",
+      "avg_order_value": 51.16
+    },
+    {
+      "month": "2026-08",
+      "sales": 3050.76,
+      "orders": 57,
+      "users": 610,
+      "category": "电子",
+      "avg_order_value": 53.52
+    },
+    {
+      "month": "2026-08",
+      "sales": 2425.47,
+      "orders": 49,
+      "users": 491,
+      "category": "家居",
+      "avg_order_value": 49.5
+    },
+    {
+      "month": "2026-08",
+      "sales": 3761.63,
+      "orders": 66,
+      "users": 609,
+      "category": "家居",
+      "avg_order_value": 56.99
+    },
+    {
+      "month": "2026-08",
+      "sales": 1632.13,
+      "orders": 91,
+      "users": 502,
+      "category": "服装",
+      "avg_order_value": 17.94
+    },
+    {
+      "month": "2026-08",
+      "sales": 3250.75,
+      "orders": 87,
+      "users": 600,
+      "category": "家居",
+      "avg_order_value": 37.36
+    },
+    {
+      "month": "2026-08",
+      "sales": 3002.51,
+      "orders": 75,
+      "users": 526,
+      "category": "家居",
+      "avg_order_value": 40.03
+    },
+    {
+      "month": "2026-08",
+      "sales": 2693.44,
+      "orders": 69,
+      "users": 583,
+      "category": "服装",
+      "avg_order_value": 39.04
+    },
+    {
+      "month": "2026-08",
+      "sales": 2210.78,
+      "orders": 89,
+      "users": 472,
+      "category": "美妆",
+      "avg_order_value": 24.84
+    },
+    {
+      "month": "2026-08",
+      "sales": 3257.63,
+      "orders": 94,
+      "users": 560,
+      "category": "电子",
+      "avg_order_value": 34.66
+    },
+    {
+      "month": "2026-08",
+      "sales": 2964.54,
+      "orders": 90,
+      "users": 545,
+      "category": "食品",
+      "avg_order_value": 32.94
+    },
+    {
+      "month": "2026-08",
+      "sales": 2554.99,
+      "orders": 86,
+      "users": 427,
+      "category": "服装",
+      "avg_order_value": 29.71
+    },
+    {
+      "month": "2026-08",
+      "sales": 2800.38,
+      "orders": 77,
+      "users": 519,
+      "category": "电子",
+      "avg_order_value": 36.37
+    },
+    {
+      "month": "2026-08",
+      "sales": 3798.44,
+      "orders": 73,
+      "users": 401,
+      "category": "家居",
+      "avg_order_value": 52.03
+    },
+    {
+      "month": "2026-09",
+      "sales": 4003.78,
+      "orders": 91,
+      "users": 423,
+      "category": "电子",
+      "avg_order_value": 44.0
+    },
+    {
+      "month": "2026-09",
+      "sales": 4491.69,
+      "orders": 54,
+      "users": 388,
+      "category": "电子",
+      "avg_order_value": 83.18
+    },
+    {
+      "month": "2026-09",
+      "sales": 5267.06,
+      "orders": 66,
+      "users": 553,
+      "category": "电子",
+      "avg_order_value": 79.8
+    },
+    {
+      "month": "2026-09",
+      "sales": 4977.45,
+      "orders": 88,
+      "users": 623,
+      "category": "电子",
+      "avg_order_value": 56.56
+    },
+    {
+      "month": "2026-09",
+      "sales": 2194.73,
+      "orders": 90,
+      "users": 599,
+      "category": "服装",
+      "avg_order_value": 24.39
+    },
+    {
+      "month": "2026-09",
+      "sales": 2372.42,
+      "orders": 49,
+      "users": 470,
+      "category": "家居",
+      "avg_order_value": 48.42
+    },
+    {
+      "month": "2026-09",
+      "sales": 5148.01,
+      "orders": 59,
+      "users": 396,
+      "category": "电子",
+      "avg_order_value": 87.25
+    },
+    {
+      "month": "2026-09",
+      "sales": 3119.76,
+      "orders": 85,
+      "users": 401,
+      "category": "电子",
+      "avg_order_value": 36.7
+    },
+    {
+      "month": "2026-09",
+      "sales": 4588.41,
+      "orders": 46,
+      "users": 373,
+      "category": "电子",
+      "avg_order_value": 99.75
+    },
+    {
+      "month": "2026-09",
+      "sales": 1809.23,
+      "orders": 67,
+      "users": 541,
+      "category": "服装",
+      "avg_order_value": 27.0
+    },
+    {
+      "month": "2026-09",
+      "sales": 3479.19,
+      "orders": 71,
+      "users": 639,
+      "category": "电子",
+      "avg_order_value": 49.0
+    },
+    {
+      "month": "2026-09",
+      "sales": 3321.02,
+      "orders": 56,
+      "users": 390,
+      "category": "电子",
+      "avg_order_value": 59.3
+    },
+    {
+      "month": "2026-09",
+      "sales": 3820.35,
+      "orders": 88,
+      "users": 473,
+      "category": "电子",
+      "avg_order_value": 43.41
+    },
+    {
+      "month": "2026-09",
+      "sales": 4315.07,
+      "orders": 59,
+      "users": 586,
+      "category": "电子",
+      "avg_order_value": 73.14
+    },
+    {
+      "month": "2026-09",
+      "sales": 4010.3,
+      "orders": 87,
+      "users": 354,
+      "category": "电子",
+      "avg_order_value": 46.1
+    },
+    {
+      "month": "2026-09",
+      "sales": 1878.01,
+      "orders": 63,
+      "users": 629,
+      "category": "美妆",
+      "avg_order_value": 29.81
+    },
+    {
+      "month": "2026-09",
+      "sales": 2644.2,
+      "orders": 67,
+      "users": 650,
+      "category": "食品",
+      "avg_order_value": 39.47
+    },
+    {
+      "month": "2026-09",
+      "sales": 3149.62,
+      "orders": 89,
+      "users": 478,
+      "category": "服装",
+      "avg_order_value": 35.39
+    },
+    {
+      "month": "2026-09",
+      "sales": 3622.03,
+      "orders": 69,
+      "users": 597,
+      "category": "电子",
+      "avg_order_value": 52.49
+    },
+    {
+      "month": "2026-09",
+      "sales": 2544.96,
+      "orders": 67,
+      "users": 644,
+      "category": "食品",
+      "avg_order_value": 37.98
+    },
+    {
+      "month": "2026-09",
+      "sales": 2760.85,
+      "orders": 46,
+      "users": 552,
+      "category": "服装",
+      "avg_order_value": 60.02
+    },
+    {
+      "month": "2026-09",
+      "sales": 2563.55,
+      "orders": 88,
+      "users": 375,
+      "category": "服装",
+      "avg_order_value": 29.13
+    },
+    {
+      "month": "2026-09",
+      "sales": 2200.14,
+      "orders": 63,
+      "users": 467,
+      "category": "美妆",
+      "avg_order_value": 34.92
+    },
+    {
+      "month": "2026-09",
+      "sales": 3745.82,
+      "orders": 85,
+      "users": 447,
+      "category": "电子",
+      "avg_order_value": 44.07
+    },
+    {
+      "month": "2026-09",
+      "sales": 4548.37,
+      "orders": 91,
+      "users": 420,
+      "category": "电子",
+      "avg_order_value": 49.98
+    },
+    {
+      "month": "2026-09",
+      "sales": 5104.79,
+      "orders": 86,
+      "users": 370,
+      "category": "电子",
+      "avg_order_value": 59.36
+    },
+    {
+      "month": "2026-09",
+      "sales": 2378.44,
+      "orders": 82,
+      "users": 536,
+      "category": "服装",
+      "avg_order_value": 29.01
+    },
+    {
+      "month": "2026-09",
+      "sales": 2479.42,
+      "orders": 63,
+      "users": 517,
+      "category": "家居",
+      "avg_order_value": 39.36
+    },
+    {
+      "month": "2026-09",
+      "sales": 2648.1,
+      "orders": 53,
+      "users": 626,
+      "category": "家居",
+      "avg_order_value": 49.96
+    },
+    {
+      "month": "2026-09",
+      "sales": 3023.36,
+      "orders": 77,
+      "users": 489,
+      "category": "家居",
+      "avg_order_value": 39.26
+    },
+    {
+      "month": "2026-10",
+      "sales": 3264.17,
+      "orders": 75,
+      "users": 501,
+      "category": "家居",
+      "avg_order_value": 43.52
+    },
+    {
+      "month": "2026-10",
+      "sales": 3451.6,
+      "orders": 52,
+      "users": 589,
+      "category": "家居",
+      "avg_order_value": 66.38
+    },
+    {
+      "month": "2026-10",
+      "sales": 1748.67,
+      "orders": 59,
+      "users": 553,
+      "category": "美妆",
+      "avg_order_value": 29.64
+    },
+    {
+      "month": "2026-10",
+      "sales": 2636.53,
+      "orders": 68,
+      "users": 396,
+      "category": "美妆",
+      "avg_order_value": 38.77
+    },
+    {
+      "month": "2026-10",
+      "sales": 2706.89,
+      "orders": 79,
+      "users": 413,
+      "category": "家居",
+      "avg_order_value": 34.26
+    },
+    {
+      "month": "2026-10",
+      "sales": 5272.08,
+      "orders": 88,
+      "users": 484,
+      "category": "电子",
+      "avg_order_value": 59.91
+    },
+    {
+      "month": "2026-10",
+      "sales": 5700.81,
+      "orders": 68,
+      "users": 405,
+      "category": "电子",
+      "avg_order_value": 83.84
+    },
+    {
+      "month": "2026-10",
+      "sales": 4695.0,
+      "orders": 84,
+      "users": 637,
+      "category": "电子",
+      "avg_order_value": 55.89
+    },
+    {
+      "month": "2026-10",
+      "sales": 3055.35,
+      "orders": 86,
+      "users": 382,
+      "category": "服装",
+      "avg_order_value": 35.53
+    },
+    {
+      "month": "2026-10",
+      "sales": 4674.34,
+      "orders": 89,
+      "users": 504,
+      "category": "电子",
+      "avg_order_value": 52.52
+    },
+    {
+      "month": "2026-10",
+      "sales": 3678.12,
+      "orders": 47,
+      "users": 369,
+      "category": "电子",
+      "avg_order_value": 78.26
+    },
+    {
+      "month": "2026-10",
+      "sales": 2853.37,
+      "orders": 51,
+      "users": 470,
+      "category": "服装",
+      "avg_order_value": 55.95
+    },
+    {
+      "month": "2026-10",
+      "sales": 1741.85,
+      "orders": 74,
+      "users": 539,
+      "category": "美妆",
+      "avg_order_value": 23.54
+    },
+    {
+      "month": "2026-10",
+      "sales": 5473.6,
+      "orders": 79,
+      "users": 564,
+      "category": "电子",
+      "avg_order_value": 69.29
+    },
+    {
+      "month": "2026-10",
+      "sales": 5426.19,
+      "orders": 71,
+      "users": 400,
+      "category": "电子",
+      "avg_order_value": 76.43
+    },
+    {
+      "month": "2026-10",
+      "sales": 4086.57,
+      "orders": 62,
+      "users": 366,
+      "category": "家居",
+      "avg_order_value": 65.91
+    },
+    {
+      "month": "2026-10",
+      "sales": 3966.43,
+      "orders": 73,
+      "users": 470,
+      "category": "电子",
+      "avg_order_value": 54.33
+    },
+    {
+      "month": "2026-10",
+      "sales": 2902.78,
+      "orders": 88,
+      "users": 538,
+      "category": "家居",
+      "avg_order_value": 32.99
+    },
+    {
+      "month": "2026-10",
+      "sales": 6146.27,
+      "orders": 67,
+      "users": 381,
+      "category": "电子",
+      "avg_order_value": 91.74
+    },
+    {
+      "month": "2026-10",
+      "sales": 2332.64,
+      "orders": 52,
+      "users": 582,
+      "category": "服装",
+      "avg_order_value": 44.86
+    },
+    {
+      "month": "2026-10",
+      "sales": 2634.42,
+      "orders": 85,
+      "users": 360,
+      "category": "食品",
+      "avg_order_value": 30.99
+    },
+    {
+      "month": "2026-10",
+      "sales": 2866.39,
+      "orders": 53,
+      "users": 639,
+      "category": "食品",
+      "avg_order_value": 54.08
+    },
+    {
+      "month": "2026-10",
+      "sales": 3814.68,
+      "orders": 80,
+      "users": 456,
+      "category": "食品",
+      "avg_order_value": 47.68
+    },
+    {
+      "month": "2026-10",
+      "sales": 5673.98,
+      "orders": 59,
+      "users": 518,
+      "category": "电子",
+      "avg_order_value": 96.17
+    },
+    {
+      "month": "2026-10",
+      "sales": 4483.21,
+      "orders": 83,
+      "users": 351,
+      "category": "家居",
+      "avg_order_value": 54.01
+    },
+    {
+      "month": "2026-10",
+      "sales": 3698.4,
+      "orders": 53,
+      "users": 626,
+      "category": "服装",
+      "avg_order_value": 69.78
+    },
+    {
+      "month": "2026-10",
+      "sales": 2306.31,
+      "orders": 87,
+      "users": 363,
+      "category": "服装",
+      "avg_order_value": 26.51
+    },
+    {
+      "month": "2026-10",
+      "sales": 2913.64,
+      "orders": 95,
+      "users": 471,
+      "category": "食品",
+      "avg_order_value": 30.67
+    },
+    {
+      "month": "2026-10",
+      "sales": 3388.95,
+      "orders": 61,
+      "users": 376,
+      "category": "电子",
+      "avg_order_value": 55.56
+    },
+    {
+      "month": "2026-10",
+      "sales": 3033.48,
+      "orders": 52,
+      "users": 382,
+      "category": "食品",
+      "avg_order_value": 58.34
+    },
+    {
+      "month": "2026-11",
+      "sales": 5871.97,
+      "orders": 77,
+      "users": 405,
+      "category": "电子",
+      "avg_order_value": 76.26
+    },
+    {
+      "month": "2026-11",
+      "sales": 4191.72,
+      "orders": 84,
+      "users": 372,
+      "category": "电子",
+      "avg_order_value": 49.9
+    },
+    {
+      "month": "2026-11",
+      "sales": 5013.38,
+      "orders": 87,
+      "users": 616,
+      "category": "家居",
+      "avg_order_value": 57.63
+    },
+    {
+      "month": "2026-11",
+      "sales": 3279.19,
+      "orders": 46,
+      "users": 381,
+      "category": "服装",
+      "avg_order_value": 71.29
+    },
+    {
+      "month": "2026-11",
+      "sales": 2837.88,
+      "orders": 72,
+      "users": 405,
+      "category": "美妆",
+      "avg_order_value": 39.41
+    },
+    {
+      "month": "2026-11",
+      "sales": 6269.59,
+      "orders": 49,
+      "users": 391,
+      "category": "电子",
+      "avg_order_value": 127.95
+    },
+    {
+      "month": "2026-11",
+      "sales": 2382.39,
+      "orders": 53,
+      "users": 490,
+      "category": "服装",
+      "avg_order_value": 44.95
+    },
+    {
+      "month": "2026-11",
+      "sales": 5290.26,
+      "orders": 90,
+      "users": 516,
+      "category": "电子",
+      "avg_order_value": 58.78
+    },
+    {
+      "month": "2026-11",
+      "sales": 3195.94,
+      "orders": 63,
+      "users": 582,
+      "category": "服装",
+      "avg_order_value": 50.73
+    },
+    {
+      "month": "2026-11",
+      "sales": 4821.74,
+      "orders": 95,
+      "users": 408,
+      "category": "电子",
+      "avg_order_value": 50.76
+    },
+    {
+      "month": "2026-11",
+      "sales": 4390.55,
+      "orders": 94,
+      "users": 632,
+      "category": "家居",
+      "avg_order_value": 46.71
+    },
+    {
+      "month": "2026-11",
+      "sales": 3337.61,
+      "orders": 73,
+      "users": 466,
+      "category": "家居",
+      "avg_order_value": 45.72
+    },
+    {
+      "month": "2026-11",
+      "sales": 6021.14,
+      "orders": 70,
+      "users": 562,
+      "category": "电子",
+      "avg_order_value": 86.02
+    },
+    {
+      "month": "2026-11",
+      "sales": 3573.19,
+      "orders": 65,
+      "users": 480,
+      "category": "家居",
+      "avg_order_value": 54.97
+    },
+    {
+      "month": "2026-11",
+      "sales": 2390.19,
+      "orders": 75,
+      "users": 384,
+      "category": "服装",
+      "avg_order_value": 31.87
+    },
+    {
+      "month": "2026-11",
+      "sales": 2520.34,
+      "orders": 72,
+      "users": 399,
+      "category": "食品",
+      "avg_order_value": 35.0
+    },
+    {
+      "month": "2026-11",
+      "sales": 3718.37,
+      "orders": 53,
+      "users": 634,
+      "category": "家居",
+      "avg_order_value": 70.16
+    },
+    {
+      "month": "2026-11",
+      "sales": 4274.19,
+      "orders": 80,
+      "users": 518,
+      "category": "食品",
+      "avg_order_value": 53.43
+    },
+    {
+      "month": "2026-11",
+      "sales": 4763.19,
+      "orders": 87,
+      "users": 566,
+      "category": "电子",
+      "avg_order_value": 54.75
+    },
+    {
+      "month": "2026-11",
+      "sales": 4559.99,
+      "orders": 63,
+      "users": 509,
+      "category": "家居",
+      "avg_order_value": 72.38
+    },
+    {
+      "month": "2026-11",
+      "sales": 3160.66,
+      "orders": 58,
+      "users": 429,
+      "category": "服装",
+      "avg_order_value": 54.49
+    },
+    {
+      "month": "2026-11",
+      "sales": 4199.86,
+      "orders": 51,
+      "users": 529,
+      "category": "电子",
+      "avg_order_value": 82.35
+    },
+    {
+      "month": "2026-11",
+      "sales": 3706.08,
+      "orders": 93,
+      "users": 492,
+      "category": "家居",
+      "avg_order_value": 39.85
+    },
+    {
+      "month": "2026-11",
+      "sales": 5960.15,
+      "orders": 80,
+      "users": 635,
+      "category": "电子",
+      "avg_order_value": 74.5
+    },
+    {
+      "month": "2026-11",
+      "sales": 4218.75,
+      "orders": 89,
+      "users": 486,
+      "category": "食品",
+      "avg_order_value": 47.4
+    },
+    {
+      "month": "2026-11",
+      "sales": 2898.59,
+      "orders": 93,
+      "users": 508,
+      "category": "食品",
+      "avg_order_value": 31.17
+    },
+    {
+      "month": "2026-11",
+      "sales": 2138.58,
+      "orders": 56,
+      "users": 423,
+      "category": "美妆",
+      "avg_order_value": 38.19
+    },
+    {
+      "month": "2026-11",
+      "sales": 4732.92,
+      "orders": 54,
+      "users": 365,
+      "category": "电子",
+      "avg_order_value": 87.65
+    },
+    {
+      "month": "2026-11",
+      "sales": 3416.36,
+      "orders": 69,
+      "users": 564,
+      "category": "食品",
+      "avg_order_value": 49.51
+    },
+    {
+      "month": "2026-11",
+      "sales": 3998.05,
+      "orders": 64,
+      "users": 516,
+      "category": "电子",
+      "avg_order_value": 62.47
+    },
+    {
+      "month": "2026-12",
+      "sales": 4402.18,
+      "orders": 50,
+      "users": 376,
+      "category": "家居",
+      "avg_order_value": 88.04
+    },
+    {
+      "month": "2026-12",
+      "sales": 4063.71,
+      "orders": 48,
+      "users": 391,
+      "category": "食品",
+      "avg_order_value": 84.66
+    },
+    {
+      "month": "2026-12",
+      "sales": 3481.24,
+      "orders": 76,
+      "users": 576,
+      "category": "服装",
+      "avg_order_value": 45.81
+    },
+    {
+      "month": "2026-12",
+      "sales": 4385.76,
+      "orders": 77,
+      "users": 408,
+      "category": "电子",
+      "avg_order_value": 56.96
+    },
+    {
+      "month": "2026-12",
+      "sales": 2432.17,
+      "orders": 88,
+      "users": 599,
+      "category": "服装",
+      "avg_order_value": 27.64
+    },
+    {
+      "month": "2026-12",
+      "sales": 4680.37,
+      "orders": 59,
+      "users": 552,
+      "category": "电子",
+      "avg_order_value": 79.33
+    },
+    {
+      "month": "2026-12",
+      "sales": 1808.61,
+      "orders": 58,
+      "users": 504,
+      "category": "美妆",
+      "avg_order_value": 31.18
+    },
+    {
+      "month": "2026-12",
+      "sales": 2863.72,
+      "orders": 93,
+      "users": 480,
+      "category": "美妆",
+      "avg_order_value": 30.79
+    },
+    {
+      "month": "2026-12",
+      "sales": 2449.49,
+      "orders": 76,
+      "users": 570,
+      "category": "服装",
+      "avg_order_value": 32.23
+    },
+    {
+      "month": "2026-12",
+      "sales": 3272.1,
+      "orders": 90,
+      "users": 467,
+      "category": "食品",
+      "avg_order_value": 36.36
+    },
+    {
+      "month": "2026-12",
+      "sales": 6345.97,
+      "orders": 67,
+      "users": 386,
+      "category": "电子",
+      "avg_order_value": 94.72
+    },
+    {
+      "month": "2026-12",
+      "sales": 3633.74,
+      "orders": 72,
+      "users": 359,
+      "category": "服装",
+      "avg_order_value": 50.47
+    },
+    {
+      "month": "2026-12",
+      "sales": 3948.83,
+      "orders": 65,
+      "users": 644,
+      "category": "电子",
+      "avg_order_value": 60.75
+    },
+    {
+      "month": "2026-12",
+      "sales": 4984.99,
+      "orders": 85,
+      "users": 563,
+      "category": "电子",
+      "avg_order_value": 58.65
+    },
+    {
+      "month": "2026-12",
+      "sales": 2992.15,
+      "orders": 65,
+      "users": 437,
+      "category": "服装",
+      "avg_order_value": 46.03
+    },
+    {
+      "month": "2026-12",
+      "sales": 4530.44,
+      "orders": 89,
+      "users": 535,
+      "category": "家居",
+      "avg_order_value": 50.9
+    },
+    {
+      "month": "2026-12",
+      "sales": 4254.19,
+      "orders": 60,
+      "users": 573,
+      "category": "食品",
+      "avg_order_value": 70.9
+    },
+    {
+      "month": "2026-12",
+      "sales": 5364.28,
+      "orders": 70,
+      "users": 508,
+      "category": "电子",
+      "avg_order_value": 76.63
+    },
+    {
+      "month": "2026-12",
+      "sales": 3523.85,
+      "orders": 94,
+      "users": 436,
+      "category": "家居",
+      "avg_order_value": 37.49
+    },
+    {
+      "month": "2026-12",
+      "sales": 3807.31,
+      "orders": 78,
+      "users": 611,
+      "category": "食品",
+      "avg_order_value": 48.81
+    },
+    {
+      "month": "2026-12",
+      "sales": 4109.81,
+      "orders": 67,
+      "users": 425,
+      "category": "食品",
+      "avg_order_value": 61.34
+    },
+    {
+      "month": "2026-12",
+      "sales": 2777.62,
+      "orders": 57,
+      "users": 438,
+      "category": "食品",
+      "avg_order_value": 48.73
+    },
+    {
+      "month": "2026-12",
+      "sales": 6113.9,
+      "orders": 86,
+      "users": 388,
+      "category": "电子",
+      "avg_order_value": 71.09
+    },
+    {
+      "month": "2026-12",
+      "sales": 4102.66,
+      "orders": 76,
+      "users": 587,
+      "category": "食品",
+      "avg_order_value": 53.98
+    },
+    {
+      "month": "2026-12",
+      "sales": 4890.26,
+      "orders": 73,
+      "users": 639,
+      "category": "家居",
+      "avg_order_value": 66.99
+    },
+    {
+      "month": "2026-12",
+      "sales": 6831.99,
+      "orders": 65,
+      "users": 511,
+      "category": "电子",
+      "avg_order_value": 105.11
+    },
+    {
+      "month": "2026-12",
+      "sales": 2612.3,
+      "orders": 73,
+      "users": 505,
+      "category": "食品",
+      "avg_order_value": 35.78
+    },
+    {
+      "month": "2026-12",
+      "sales": 4462.66,
+      "orders": 67,
+      "users": 609,
+      "category": "家居",
+      "avg_order_value": 66.61
+    },
+    {
+      "month": "2026-12",
+      "sales": 3444.57,
+      "orders": 47,
+      "users": 379,
+      "category": "食品",
+      "avg_order_value": 73.29
+    },
+    {
+      "month": "2026-12",
+      "sales": 2767.59,
+      "orders": 86,
+      "users": 396,
+      "category": "服装",
+      "avg_order_value": 32.18
+    }
+  ],
+  "generated_at": "2026-07-28T06:00:32.099346+00:00",
+  "generated_by": "skill:industry-data-query"
+}
