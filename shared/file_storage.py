@@ -168,7 +168,7 @@ def save_service_result(
     将服务产出（artifact）保存为文件。
 
     Args:
-        service_id: 服务 ID（如 data.industry.query）
+        service_id: 服务 ID（如 doc.weekly.report）
         artifact: artifact 对象（含 payload）
         trade_no: 交易编号
 

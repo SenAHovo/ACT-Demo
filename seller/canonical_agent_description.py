@@ -1,14 +1,14 @@
 """
 智能体统一描述模块
 
-维护 CanonicalAgentDescription，作为 A2A Agent Card 和 GB/Z 描述的统一事实源。
+维护 CanonicalAgentDescription，作为 Agent Card 和 GB/Z 描述的统一事实源。
 """
 
 from __future__ import annotations
 
 from decimal import Decimal
 
-AGENT_ID = "urn:demo:agent:seller:doc-service-001"
+AGENT_ID = "urn:demo:agent:seller:research-service-001"
 AGENT_ID_SCHEME = "demo"
 AGENT_NAME = "文档与生活服务智能体"
 AGENT_DESCRIPTION = "提供周报生成、旅游攻略生成和多语言翻译服务（教学用途）"

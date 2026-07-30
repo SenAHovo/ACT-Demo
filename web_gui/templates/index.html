@@ -644,12 +644,10 @@ function addDownloadCard(parentMsg, fileId, filename, serviceId) {
     var hintText = '点击下载文件';
     if (serviceId === 'utility.translation') {
         hintText = '点击下载翻译结果';
-    } else if (serviceId === 'data.industry.query') {
-        hintText = '点击下载数据查询结果';
-    } else if (serviceId === 'analysis.industry.trend') {
-        hintText = '点击下载趋势分析结果';
-    } else if (serviceId === 'report.industry.brief') {
-        hintText = '点击下载行业简报';
+    } else if (serviceId === 'doc.weekly.report') {
+        hintText = '点击下载周报';
+    } else if (serviceId === 'lifestyle.travel.guide') {
+        hintText = '点击下载旅游攻略';
     }
     var card = document.createElement('div');
     card.className = 'file-card';

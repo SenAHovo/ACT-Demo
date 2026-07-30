@@ -212,7 +212,7 @@ class PaymentProof(BaseModel):
 # ============================================================
 class ServiceArtifact(BaseModel):
     artifact_id: str
-    artifact_type: str  # industry_data | industry_analysis | industry_report
+    artifact_type: str  # 交付物类型（如 weekly_report | travel_guide | translation）
     session_id: str
     task_id: str
     source_artifact_ids: list[str] = Field(default_factory=list)

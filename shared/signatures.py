@@ -62,7 +62,7 @@ def public_key_to_b64(public_key: ed25519.Ed25519PublicKey) -> str:
 
 def sign_json(private_key: ed25519.Ed25519PrivateKey, obj: object) -> str:
     """
-    对对象进行 JCS 规范化后签名，返回 Base64URL 签名字符串。
+    对对象进行确定性序列化后签名，返回 Base64URL 签名字符串。
     """
     canonical = jcs_canonicalize(obj)
     signature = private_key.sign(canonical)
@@ -73,7 +73,7 @@ def verify_json(
     public_key: ed25519.Ed25519PublicKey, obj: object, signature_b64: str
 ) -> bool:
     """
-    验证对象（JCS 规范化后）的 Ed25519 签名。
+    验证对象（确定性序列化后）的 Ed25519 签名。
     """
     canonical = jcs_canonicalize(obj)
     signature = b64url_decode(signature_b64)
@@ -86,7 +86,7 @@ def verify_json(
 
 def compute_sha256_digest(obj: object) -> str:
     """
-    计算对象的 SHA-256 摘要（JCS 规范化 + SHA-256），返回 hex 字符串。
+    计算对象的 SHA-256 摘要（确定性序列化 + SHA-256），返回 hex 字符串。
     """
     canonical = jcs_canonicalize(obj)
     return hashlib.sha256(canonical).hexdigest()

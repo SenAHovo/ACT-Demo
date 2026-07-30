@@ -2,7 +2,7 @@
 
 ## 职责
 
-卖方智能体代表同一商户或服务提供方，对外提供三项商品化服务（模拟行业数据查询、行业趋势分析、简要报告生成）。运行端口：**8001**。
+卖方智能体代表同一商户或服务提供方，对外提供三项商品化服务（周报生成、旅游攻略生成、多语言翻译）。运行端口：**8001**。
 
 ## 固定标识
 
@@ -16,8 +16,9 @@ agent_id_scheme = demo
 | 模块 | 文件 | 职责 |
 |---|---|---|
 | 应用入口 | `app.py` | FastAPI应用，挂载Agent Card、服务目录、服务调用等路由 |
-| 统一智能体描述 | `canonical_agent_description.py` | 维护CanonicalAgentDescription，作为A2A和GB/Z描述的统一事实源 |
-| A2A序列化器 | `agent_card_serializer.py` | 将统一描述序列化为A2A Agent Card格式 |
+| 统一描述 | `canonical_agent_description.py` | 维护智能体统一描述，作为 Agent Card 和 GB/Z 描述的事实源 |
+| Agent Card | `agent_card_serializer.py` | 将统一描述序列化为 Agent Card 格式（案例自定义） |
+| 任务管理 | `a2a_task_manager.py` | 类 A2A 任务生命周期管理（案例内部协议） |
 | GB/Z序列化器 | `gbz_description_serializer.py` | 将统一描述映射为GB/Z 185.4字段描述 |
 | 服务目录 | `catalog.py` | 发布三项商品化服务，维护价格、类别和Schema |
 | 认证适配器 | `authentication_adapter.py` | 验证买方凭证引用及状态 |
@@ -31,9 +32,9 @@ agent_id_scheme = demo
 
 ```text
 skills/
-├── industry-data-query/         # 模拟行业数据查询 (0.20元)
-├── industry-trend-analysis/     # 行业趋势分析 (0.30元)
-└── industry-report-generation/  # 简要行业报告生成 (0.40元)
+├── weekly-report-generation/    # 周报生成 (0.30元)
+├── travel-guide-generation/     # 旅游攻略生成 (0.35元)
+└── translation/                 # 多语言翻译 (0.15元)
 ```
 
 每个Skill目录包含：

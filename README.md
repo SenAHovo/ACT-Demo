@@ -15,7 +15,7 @@
 - **数据库**: SQLite
 - **LLM**: DeepSeek API (deepseek-v4-flash)
 - **签名算法**: Ed25519
-- **摘要算法**: SHA-256 + RFC 8785 JCS规范化
+- **摘要算法**: SHA-256 + 确定性 JSON 序列化
 
 ## 快速启动
 

@@ -76,11 +76,11 @@ def _clean_emoji(text: str) -> str:
 # ============================================================
 SYSTEM_PROMPT = """你是「ACT 智能体自主委托支付 Demo」中的 AI 购买助手。
 
-你的核心职责是通过 A2A（Agent-to-Agent）协议帮助用户发现和购买各类智能体服务（周报生成、旅游攻略生成、翻译等）。
+你的核心职责是通过 Agent-to-Agent 任务协议帮助用户发现和购买各类智能体服务（周报生成、旅游攻略生成、翻译等）。
 
 ## ACT 四大域流程
 1. 委托授权域: confirm_purchase_plan → create_delegation（签发 IAC，设定预算上限）
-2. 商业交互域: 通过 A2A 协议在卖家智能体上创建 Task → 发送 Message → 卖家 Skill 执行
+2. 商业交互域: 在卖家智能体上创建 Task → 发送 Message → 卖家 Skill 执行
 3. 支付结算域: 卖家返回 PAYMENT_REQUIRED → 执行 PSP 支付 → 卖家完成交付
 4. 信任服务域: 卖家自动提交存证，保障不可否认性
 
@@ -591,13 +591,6 @@ class ConversationAgent:
                     f"从{lang_s}翻译到{lang_t}，请帮我处理。\n"
                     f"委托ID: {self._delegation['delegation_id']}"
                 )
-        elif service_id == "data.industry.query":
-            message_content = (
-                f"你好，我需要查询零售行业数据。\n"
-                f"数据集: retail-demo-2026，时间范围: 2026-01 到 2026-06\n"
-                f"维度: 销售额、订单数、用户数、品类分布\n"
-                f"委托ID: {self._delegation['delegation_id']}"
-            )
         else:
             message_content = (
                 f"请执行服务: {svc_name}\n"
@@ -780,13 +773,6 @@ class ConversationAgent:
             svc = a.get("service_id", "?")
             adata = a.get("payload", {})
             lines.append(f"  [{svc}] {a.get('artifact_id','')}")
-            if svc == "data.industry.query":
-                lines.append(f"    记录数: {adata.get('rows', '?')}")
-            elif svc == "analysis.industry.trend":
-                m = adata.get("metrics", {})
-                lines.append(f"    增长率: sales={m.get('sales_growth','?')}, orders={m.get('order_growth','?')}")
-            elif svc == "report.industry.brief":
-                lines.append(f"    标题: {adata.get('report_title', '?')}")
         return "\n".join(lines)
 
     async def _tool_no_action(self, args: dict) -> str:

@@ -8,7 +8,7 @@
 
 | 概念 | 说明 | 位置 |
 |---|---|---|
-| A2A Agent Skill | Agent Card中的公开能力描述 | `/.well-known/agent-card.json` |
+| Agent Skill | Agent Card 中的公开能力描述 | `/.well-known/agent-card.json` |
 | 内部Skill目录 | 卖方智能体内部按需加载的实现包 | `skills/` 目录 |
 | 商品化服务 (Service Offer) | 带价格和交付条件的交易标的 | `GET /v1/catalog` |
 
@@ -16,11 +16,11 @@
 
 | Skill | service_id | category | 价格 |
 |---|---|---|---|
-| 模拟行业数据查询 | `data.industry.query` | `data.industry` | 0.20 CNY |
-| 行业趋势分析 | `analysis.industry.trend` | `analysis.industry` | 0.30 CNY |
-| 简要行业报告生成 | `report.industry.brief` | `report.industry` | 0.40 CNY |
+| 周报生成 | `doc.weekly.report` | `document.office` | 0.30 CNY |
+| 旅游攻略生成 | `lifestyle.travel.guide` | `lifestyle.travel` | 0.35 CNY |
+| 多语言翻译 | `utility.translation` | `utility` | 0.15 CNY |
 
-总支出 0.90元，处于 1.00元 预算内。
+总支出 0.80元，处于 1.00元 预算内。
 
 ## 每个Skill目录结构
 

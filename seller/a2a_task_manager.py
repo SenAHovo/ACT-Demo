@@ -1,7 +1,7 @@
 """
-A2A Task Manager — 任务生命周期管理
+类 A2A Task Manager — 任务生命周期管理
 
-管理买家智能体在卖家智能体上创建的 A2A Task 的完整生命周期：
+管理买家智能体在卖家智能体上创建的任务的完整生命周期（案例内部协议）：
   CREATED → PROCESSING → PAYMENT_REQUIRED → PAID → FULFILLED / FAILED
 """
 
@@ -32,7 +32,7 @@ async def create_task(
     goal: str,
     delegation_id: str = "",
 ) -> dict:
-    """创建 A2A Task。买家在卖家上发起一个新任务。"""
+    """创建任务。买家在卖家上发起一个新任务。"""
     task_id = f"a2a_task_{uuid.uuid4().hex[:16]}"
     now_iso = to_iso(utc_now())
 

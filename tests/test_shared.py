@@ -71,7 +71,7 @@ def test_schemas():
         validity_start_time=now, validity_end_time=future,
         max_total_amount=Decimal("1.00"), max_single_amount=Decimal("0.50"),
         allowed_sellers=["urn:demo:agent:seller:research-service-001"],
-        allowed_categories=["data.industry", "analysis.industry", "report.industry"],
+        allowed_categories=["document.office", "lifestyle.travel", "utility"],
         allowed_payment_methods=["urn:demo:payment:local-balance:v1"],
         source_isr_digest="sha256:abc",
         status_reference="http://127.0.0.1:8000/v1/delegations/del_001",

@@ -1,5 +1,5 @@
 """
-A2A Message Handler — 卖家智能体接收买家消息后的处理逻辑
+A2A Message Handler — 卖家智能体接收买家消息后的处理逻辑（案例内部协议）
 
 卖家 LLM 解析买家消息意图 → 调度 Skill 执行 → 生成 Artifact → 处理支付
 """

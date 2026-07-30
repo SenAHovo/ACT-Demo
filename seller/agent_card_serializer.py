@@ -1,7 +1,7 @@
 """
-A2A Agent Card 序列化器
+类 A2A Agent Card 序列化器
 
-将统一描述序列化为 A2A Agent Card 格式。
+将统一描述序列化为类 A2A Agent Card 格式（案例自定义结构，非 Google A2A 标准）。
 """
 
 from .canonical_agent_description import get_canonical_description

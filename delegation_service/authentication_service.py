@@ -30,7 +30,7 @@ async def authenticate(
         subject_agent_id: 被验证方 agent_id
         verifier_agent_id: 验证方 agent_id
         credential_id: 被验证方的凭证 ID
-        challenge: JCS 规范化后的挑战对象
+        challenge: 确定性序列化后的挑战对象
         signature_b64: Base64URL 签名
 
     Returns:

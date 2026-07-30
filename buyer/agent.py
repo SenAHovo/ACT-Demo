@@ -24,9 +24,9 @@ BUYER_ID = "urn:demo:agent:buyer:001"
 SELLER_ID = "urn:demo:agent:seller:research-service-001"
 
 SERVICE_ORDER = [
-    {"service_id": "data.industry.query", "input": {"dataset_id": "retail-demo-2026", "start_month": "2026-01", "end_month": "2026-06", "dimensions": ["sales", "orders", "users", "category"]}},
-    {"service_id": "analysis.industry.trend", "input": {}},
-    {"service_id": "report.industry.brief", "input": {}},
+    {"service_id": "doc.weekly.report", "input": {}},
+    {"service_id": "lifestyle.travel.guide", "input": {"destination": "杭州", "origin": "北京", "days": 3}},
+    {"service_id": "utility.translation", "input": {"text": "智能体交易是人工智能在商业领域的创新应用。", "source_lang": "zh", "target_lang": "en"}},
 ]
 
 
@@ -101,13 +101,13 @@ async def _create_delegation(session_id: str) -> dict:
     async with httpx.AsyncClient(timeout=10.0) as client:
         # 创建 ISR
         intent_resp = await client.post(f"{DELEGATION_URL}/v1/intents", json={
-            "task_goal": "查询零售行业数据，分析趋势，生成报告",
+            "task_goal": "生成周报、查询旅游攻略、翻译文档",
             "agent_id": BUYER_ID,
             "user_agent_binding_id": "uab_demo_001",
             "max_total_amount": "1.00",
             "max_single_amount": "0.50",
             "allowed_sellers": [SELLER_ID],
-            "allowed_categories": ["data.industry", "analysis.industry", "report.industry"],
+            "allowed_categories": ["document.office", "lifestyle.travel", "utility"],
             "allowed_payment_methods": ["urn:demo:payment:local-balance:v1"],
         })
         intent = intent_resp.json()

@@ -178,7 +178,7 @@ async def api_order_status(out_trade_no: str):
 
 
 # ============================================================
-# A2A 协议端点 — 商业交互域
+# 类 A2A 任务交互端点 — 商业交互域（案例内部协议，非 Google A2A 标准）
 # ============================================================
 class A2ATaskRequest(BaseModel):
     buyer_agent_id: str
