@@ -20,21 +20,6 @@
 ## 快速启动
 
 ```bash
-# 1. 安装依赖
-pip install -r requirements.txt
-
-# 2. 配置环境变量
-#    将 .env.example 复制为 .env，然后编辑填入你的 DEEPSEEK_API_KEY
-#    Linux/macOS: cp .env.example .env
-#    Windows:     copy .env.example .env
-
-# 3. 启动 Demo
-python run_demo.py
-```
-
-## 项目结构
-
-```text
 act-autonomous-payment-demo/
 ├── buyer/                    # 买方智能体
 ├── delegation_service/       # 委托授权、身份与绑定服务
@@ -45,6 +30,21 @@ act-autonomous-payment-demo/
 ├── llm/                      # DeepSeek API适配层
 ├── tests/                    # 测试用例
 └── logs/                     # 运行日志
+```
+
+## 项目结构
+
+```text
+# 1. 安装依赖
+pip install -r requirements.txt
+
+# 2. 配置环境变量
+#    将 .env.example 复制为 .env，然后编辑填入你的 DEEPSEEK_API_KEY
+#    Linux/macOS: cp .env.example .env
+#    Windows:     copy .env.example .env
+
+# 3. 启动 Demo
+python run_demo.py
 ```
 
 ## 案例边界声明
